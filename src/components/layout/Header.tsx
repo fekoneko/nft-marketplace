@@ -6,19 +6,23 @@ import { twMerge } from 'tailwind-merge';
 import Media from 'react-media';
 import ActionButton from '../common/ActionButton';
 
-const navItems = [
+interface Item {
+  name: string;
+  link: string;
+}
+const navItems: Item[] = [
   { name: 'Marketplace', link: '/' },
   { name: 'Rankings', link: '/' },
   { name: 'Connect a wallet', link: '/' },
 ];
-const menuItems = [...navItems, { name: 'Sing up', link: '/' }];
+const menuItems: Item[] = [...navItems, { name: 'Sign up', link: '/' }];
 
 interface MenuProps {
   isOpen?: boolean;
 }
 const Menu = ({ isOpen }: MenuProps) => {
   return (
-    <nav className="relative">
+    <nav role="navigation" className="relative">
       <ul
         className={twMerge(
           'bg-background absolute flex w-full flex-col transition-transform duration-500',
@@ -39,7 +43,7 @@ const Menu = ({ isOpen }: MenuProps) => {
 
 const Nav = () => {
   return (
-    <nav>
+    <nav role="navigation">
       <ul className="flex">
         {navItems.map((item) => (
           <li key={item.name}>
