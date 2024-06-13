@@ -4,10 +4,14 @@ This is my first test assignment for internship.
 It contains a homepage layout for NFT marketplace that was done based on Figma design.
 
 Stack:
+
 - Vite + SWC
 - React
 - Tailwind CSS
-- Typescript
+- Tailwind CSS Animated
+- tailwind-merge
+- react-media
+- TypeScript
 - ESLint
 - Prettier
 
