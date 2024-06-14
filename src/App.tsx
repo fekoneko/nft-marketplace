@@ -4,9 +4,9 @@ import Homepage from './pages/Homepage';
 
 const App = () => {
   return (
-    <div className="font-main bg-background text-text flex h-dvh w-screen flex-col">
+    <div className="flex h-dvh w-screen flex-col overflow-hidden bg-background font-main text-text">
       <Header />
-      <div className="grow">
+      <div className="no-scrollbar grow overflow-y-scroll">
         <Homepage />
         <Footer />
       </div>

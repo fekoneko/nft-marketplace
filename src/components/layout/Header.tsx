@@ -1,5 +1,5 @@
 import logo from '../../assets/logo.svg';
-import hamburgerMenuIcon from '../../assets/hamburger-menu.svg';
+import hamburgerMenuIcon from '../../assets/hamburger-menu-icon.svg';
 import userIcon from '../../assets/user-icon.svg';
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
@@ -25,7 +25,7 @@ const Menu = ({ isOpen }: MenuProps) => {
     <nav role="navigation" className="relative">
       <ul
         className={twMerge(
-          'bg-background absolute flex w-full flex-col transition-transform duration-500',
+          'absolute flex w-full flex-col bg-background transition-transform duration-500',
           isOpen ? 'translate-y-0' : '-translate-y-full',
         )}
       >
@@ -64,7 +64,7 @@ const Header = () => {
     <Media queries={{ large: '(min-width: 1024px)' }}>
       {(matches) => (
         <>
-          <div className="bg-background z-10 flex items-center justify-between px-8 py-4 font-semibold sm:px-12 lg:py-5">
+          <header className="z-10 flex items-center justify-between bg-background px-8 py-4 font-semibold sm:px-12 lg:py-5">
             <a href="/" role="banner" className="flex gap-2">
               <img src={logo} alt="Marketplace Logo" className="size-6 lg:size-8" />
               <h1 className="font-mono lg:text-2xl">NFT Marketplace</h1>
@@ -82,7 +82,7 @@ const Header = () => {
                 <img src={hamburgerMenuIcon} alt="Menu" />
               </button>
             )}
-          </div>
+          </header>
 
           {!matches.large && <Menu isOpen={isOpen} />}
         </>
