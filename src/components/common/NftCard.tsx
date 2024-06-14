@@ -19,7 +19,11 @@ const NftCard = ({
         figureAttributes.className,
       )}
     >
-      <img src={nft.image} alt={`Image of NFT "${nft.title}"`} />
+      <img
+        src={nft.image}
+        alt={`Image of NFT "${nft.title}"`}
+        className={twMerge('w-full object-cover', detailed ? 'aspect-[11/10]' : 'aspect-[5/4]')}
+      />
 
       <div className={twMerge('flex flex-col p-5 pb-6', detailed ? 'gap-1.5' : 'gap-2.5')}>
         <figcaption className="text-2xl font-semibold">{nft.title}</figcaption>

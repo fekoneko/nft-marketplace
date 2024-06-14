@@ -9,8 +9,8 @@ const config: Config = {
         'background-secondary': '#3b3b3b',
         text: '#ffffff',
         'text-secondary': '#858584',
-        'call-to-action': '#a259ff',
-        'call-to-action-hover': '#b274ff',
+        accent: '#a259ff',
+        'accent-hover': '#b274ff',
       },
       fontFamily: {
         main: ['Work Sans', 'sans-serif'],

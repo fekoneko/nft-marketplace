@@ -11,3 +11,10 @@ export interface Nft {
   price: number;
   highestBid: number;
 }
+
+export interface Collection {
+  title: string;
+  creator: Creator;
+  previews: string[];
+  size: number;
+}

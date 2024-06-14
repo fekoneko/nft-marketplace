@@ -11,7 +11,7 @@ const ActionButton = ({
 }: ActionButtonProps & HTMLAttributes<HTMLButtonElement>) => {
   return (
     <button {...buttonAttributes}>
-      <div className="flex justify-center gap-3 rounded-[1.25rem] bg-call-to-action px-8 py-4 font-semibold transition-all [:hover>&]:-translate-y-1 [:hover>&]:bg-call-to-action-hover">
+      <div className="bg-accent [:hover>&]:bg-accent-hover flex justify-center gap-3 rounded-[1.25rem] px-8 py-4 font-semibold transition-all [:hover>&]:-translate-y-1">
         {icon && <img src={icon} alt="" />}
         {children}
       </div>
