@@ -8,7 +8,6 @@ Stack:
 - Vite + SWC
 - React
 - Tailwind CSS
-- Tailwind CSS Animated
 - tailwind-merge
 - react-media
 - TypeScript
