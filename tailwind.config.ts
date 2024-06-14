@@ -21,7 +21,11 @@ const config: Config = {
         '2xl': '1.375rem',
         '3xl': '1.75rem',
         '4xl': '2.375rem',
+        '5xl': '3.55rem',
         '6xl': '4.25rem',
+      },
+      screens: {
+        xl: '1130px',
       },
     },
   },
