@@ -1,7 +1,7 @@
 import { Nft } from '../../@types/globals';
 import ActionButton from '../common/ActionButton';
 import NftCard from '../common/NftCard';
-import getStartedIcon from '../../assets/get-started-icon.svg';
+import getStartedIcon from '../../assets/icons/get-started-icon.svg';
 import Media from 'react-media';
 
 const highlightedNft: Nft = {
