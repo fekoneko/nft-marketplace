@@ -1,4 +1,4 @@
-import logo from '../../assets/icons/logo.svg';
+import logo from '../../assets/logo.svg';
 import hamburgerMenuIcon from '../../assets/icons/hamburger-menu-icon.svg';
 import userIcon from '../../assets/icons/user-icon.svg';
 import { useState } from 'react';
