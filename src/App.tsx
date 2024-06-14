@@ -4,7 +4,7 @@ import Homepage from './pages/Homepage';
 
 const App = () => {
   return (
-    <div className="flex h-dvh w-screen flex-col overflow-hidden bg-background font-main text-text">
+    <div className="flex h-dvh min-h-[250px] w-screen min-w-[300px] max-w-[1600px] flex-col overflow-hidden font-main text-text">
       <Header />
       <div className="no-scrollbar grow overflow-y-scroll">
         <Homepage />

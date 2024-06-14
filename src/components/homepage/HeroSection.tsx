@@ -3,7 +3,6 @@ import ActionButton from '../common/ActionButton';
 import NftCard from '../common/NftCard';
 import getStartedIcon from '../../assets/get-started-icon.svg';
 import Media from 'react-media';
-import { HTMLAttributes } from 'react';
 
 const highlightedNft: Nft = {
   image: '/nfts/space-walking-by-animakid.jpg',
