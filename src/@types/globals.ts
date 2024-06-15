@@ -18,3 +18,9 @@ export interface Collection {
   previews: string[];
   size: number;
 }
+
+export interface Category {
+  icon: string;
+  title: string;
+  preview: string;
+}

@@ -1,6 +1,7 @@
 import WelcomeSection from '../components/homepage/WelcomeSection';
 import CollectionsSection from '../components/homepage/CollectionsSection';
 import CreatorsSection from '../components/homepage/CreatorsSection';
+import CategoriesSection from '../components/homepage/CategoriesSection';
 
 const Homepage = () => {
   return (
@@ -8,6 +9,7 @@ const Homepage = () => {
       <WelcomeSection />
       <CollectionsSection />
       <CreatorsSection />
+      <CategoriesSection />
     </main>
   );
 };

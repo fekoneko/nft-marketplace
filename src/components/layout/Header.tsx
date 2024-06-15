@@ -26,7 +26,7 @@ const Menu = ({ isOpen }: MenuProps) => {
     <nav role="navigation" className="relative">
       <ul
         className={twMerge(
-          'absolute flex w-full flex-col bg-background pb-2 shadow-xl transition-transform duration-500',
+          'absolute z-40 flex w-full flex-col bg-background pb-2 shadow-xl transition-transform duration-500',
           isOpen ? 'translate-y-0' : 'translate-y-[-120%]',
         )}
       >
@@ -68,7 +68,7 @@ const Header = () => {
     <Media queries={{ large: '(min-width: 1024px)' }}>
       {(matches) => (
         <>
-          <header className="z-10 flex items-center justify-between bg-background px-8 py-4 font-semibold shadow-transparent transition-shadow sm:px-12 lg:py-5">
+          <header className="z-50 flex items-center justify-between bg-background px-8 py-4 font-semibold shadow-transparent transition-shadow sm:px-12 lg:py-5">
             <a href="/" role="banner" className="flex gap-2">
               <img src={logo} alt="Marketplace Logo" className="size-6 lg:size-8" />
               <h1 className="font-mono lg:text-2xl">NFT Marketplace</h1>

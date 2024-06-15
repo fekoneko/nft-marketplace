@@ -25,6 +25,7 @@ const config: Config = {
         '6xl': '4.25rem',
       },
       screens: {
+        md: '920px',
         xl: '1130px',
       },
     },

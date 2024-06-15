@@ -5,6 +5,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .hide-svg-blur {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
+
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
@@ -12,5 +25,10 @@
   .no-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
+  }
+
+  .svg-blur {
+    -webkit-filter: url('#svg-blur');
+    filter: url('#svg-blur');
   }
 }
