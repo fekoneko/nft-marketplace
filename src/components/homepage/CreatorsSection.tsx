@@ -91,9 +91,9 @@ const CreatorsSection = () => {
         <section className="px-8 py-10 sm:px-[4.5rem] lg:px-[7.25rem] lg:py-20">
           <div className="mb-9 flex items-end justify-between gap-24 lg:mb-[3.75rem]">
             <div>
-              <h1 className="mb-1.5 text-3xl font-semibold lg:text-4xl">Top creators</h1>
+              <h1 className="mb-1.5 text-3xl font-semibold lg:text-4xl">Top Creators</h1>
               <p className="text-lg lg:text-2xl">
-                Checkout Top Rated Creators on the NFT Marketplace
+                Checkout Top Rated Creators On The NFT Marketplace
               </p>
             </div>
             {!matches.small && <ViewRankingsButton />}

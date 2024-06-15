@@ -64,7 +64,7 @@ const NftsSection = () => {
           <div className="mb-9 flex items-end justify-between gap-24 lg:mb-[3.75rem]">
             <div>
               <h1 className="mb-1.5 text-3xl font-semibold lg:text-4xl">Discover More NFTs</h1>
-              <p className="text-lg lg:text-2xl">Explore new trending NFTs</p>
+              <p className="text-lg lg:text-2xl">Explore New Trending NFTs</p>
             </div>
             {!matches.small && <SeeAllButton />}
           </div>
