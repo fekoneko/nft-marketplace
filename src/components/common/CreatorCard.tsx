@@ -23,7 +23,12 @@ const CreatorCard = ({
       )}
     >
       {topRank !== undefined && (
-        <p className="absolute left-3 top-3 flex h-[1.875rem] min-w-[1.875rem] items-center justify-center rounded-full bg-background px-1 font-mono text-text-secondary lg:left-5 lg:top-5">
+        <p
+          className={twMerge(
+            'absolute flex h-[1.875rem] min-w-[1.875rem] items-center justify-center rounded-full bg-background px-1 font-mono text-text-secondary',
+            compact ? 'left-3 top-3' : 'left-5 top-5',
+          )}
+        >
           {topRank}
         </p>
       )}
