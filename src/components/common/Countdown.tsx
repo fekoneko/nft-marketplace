@@ -39,22 +39,22 @@ const Countdown = ({ initialTime, caption }: CountdownProps) => {
   return (
     <div className="flex justify-center rounded-[1.25rem] bg-background-secondary/50 p-[1.875rem] font-mono">
       <div className="flex flex-col gap-2.5">
-        {caption && <p className="text-[0.75rem]">{caption}:</p>}
+        {caption && <p className="text-xs">{caption}:</p>}
 
         <div className="flex items-start gap-2">
           <div>
             <p className="text-4xl font-semibold leading-[2.85rem]">{formatTimerNumber(hours)}</p>
-            <p className="text-[0.75rem]">Hours</p>
+            <p className="text-xs">Hours</p>
           </div>
           <p className="text-3xl font-semibold leading-10">:</p>
           <div>
             <p className="text-4xl font-semibold leading-[2.85rem]">{formatTimerNumber(minutes)}</p>
-            <p className="text-[0.75rem]">Minutes</p>
+            <p className="text-xs">Minutes</p>
           </div>
           <p className="text-3xl font-semibold leading-10">:</p>
           <div>
             <p className="text-4xl font-semibold leading-[2.85rem]">{formatTimerNumber(seconds)}</p>
-            <p className="text-[0.75rem]">Seconds</p>
+            <p className="text-xs">Seconds</p>
           </div>
         </div>
       </div>
