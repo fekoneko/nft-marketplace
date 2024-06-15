@@ -1,11 +1,11 @@
-import HeroSection from '../components/homepage/HeroSection';
-import TrendingSection from '../components/homepage/TrendingSection';
+import WelcomeSection from '../components/homepage/WelcomeSection';
+import CollectionsSection from '../components/homepage/CollectionsSection';
 
 const Homepage = () => {
   return (
     <main role="main">
-      <HeroSection />
-      <TrendingSection />
+      <WelcomeSection />
+      <CollectionsSection />
     </main>
   );
 };

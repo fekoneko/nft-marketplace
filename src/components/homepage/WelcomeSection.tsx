@@ -43,7 +43,7 @@ const Stats = () => {
   );
 };
 
-const HeroSection = () => {
+const WelcomeSection = () => {
   return (
     <Media queries={{ medium: '(min-width: 640px)' }}>
       {(matches) => (
@@ -70,4 +70,4 @@ const HeroSection = () => {
     </Media>
   );
 };
-export default HeroSection;
+export default WelcomeSection;

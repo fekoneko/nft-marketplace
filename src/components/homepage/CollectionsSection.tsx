@@ -47,7 +47,7 @@ const collections: Collection[] = [
   },
 ];
 
-const TrendingSection = () => {
+const CollectionsSection = () => {
   return (
     <Media
       queries={{
@@ -72,4 +72,4 @@ const TrendingSection = () => {
     </Media>
   );
 };
-export default TrendingSection;
+export default CollectionsSection;
