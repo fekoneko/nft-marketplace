@@ -71,7 +71,7 @@ const ViewRankingsButton = () => {
   return (
     <ActionButton
       icon={getStartedIcon}
-      className="mt-10 w-full whitespace-nowrap sm:mt-0 sm:w-auto"
+      className="mt-10 w-full whitespace-nowrap *:px-12 sm:mt-0 sm:w-auto"
     >
       View Rankings
     </ActionButton>

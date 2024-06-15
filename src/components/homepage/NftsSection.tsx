@@ -42,7 +42,10 @@ const nfts: Nft[] = [
 
 const SeeAllButton = () => {
   return (
-    <ActionButton icon={seeAllIcon} className="mt-10 w-full whitespace-nowrap sm:mt-0 sm:w-auto">
+    <ActionButton
+      icon={seeAllIcon}
+      className="mt-10 w-full whitespace-nowrap *:px-12 sm:mt-0 sm:w-auto"
+    >
       See All
     </ActionButton>
   );
@@ -57,7 +60,7 @@ const NftsSection = () => {
       }}
     >
       {(matches) => (
-        <section className="px-8 py-10 sm:px-[4.5rem] lg:px-[7.25rem] lg:py-20">
+        <section className="px-8 py-10 sm:px-[4.5rem] sm:pb-20 lg:px-[7.25rem] lg:py-20">
           <div className="mb-9 flex items-end justify-between gap-24 lg:mb-[3.75rem]">
             <div>
               <h1 className="mb-1.5 text-3xl font-semibold lg:text-4xl">Discover More NFTs</h1>
