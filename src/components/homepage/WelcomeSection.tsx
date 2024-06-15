@@ -1,7 +1,7 @@
 import { Nft } from '../../@types/globals';
 import ActionButton from '../common/ActionButton';
 import NftCard from '../common/NftCard';
-import getStartedIcon from '../../assets/icons/get-started-icon.svg';
+import getStartedIcon from '../../assets/button-icons/get-started-icon.svg';
 import Media from 'react-media';
 
 const highlightedNft: Nft = {
@@ -18,7 +18,7 @@ const highlightedNft: Nft = {
 
 const GetStartedButton = () => {
   return (
-    <ActionButton icon={getStartedIcon} className="sm:self-start sm:*:px-12">
+    <ActionButton icon={getStartedIcon} withAccent className="sm:self-start sm:*:px-12">
       Get Started
     </ActionButton>
   );

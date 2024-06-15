@@ -59,7 +59,7 @@ const CollectionsSection = () => {
         <section className="px-8 py-10 sm:px-[4.5rem] lg:px-[7.25rem] lg:py-20">
           <h1 className="mb-1.5 text-3xl font-semibold lg:text-4xl">Trending Collection</h1>
           <p className="mb-9 text-lg lg:mb-[3.75rem] lg:text-2xl">
-            Checkout our weekly updated trending collection.
+            Checkout our weekly updated trending collection
           </p>
 
           <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
