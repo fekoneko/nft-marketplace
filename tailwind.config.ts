@@ -9,6 +9,7 @@ const config: Config = {
         'background-secondary': '#3b3b3b',
         text: '#ffffff',
         'text-secondary': '#858584',
+        'text-footer': '#cccccc',
         accent: '#a259ff',
         'accent-hover': '#b274ff',
       },

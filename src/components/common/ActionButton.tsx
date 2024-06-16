@@ -7,26 +7,29 @@ export interface ActionButtonProps {
   children?: ReactNode;
   withAccent?: boolean;
   light?: boolean;
+  disableAnimation?: boolean;
 }
 const ActionButton = ({
   icon,
   children,
   withAccent,
   light,
+  disableAnimation,
   ...buttonAttributes
 }: ActionButtonProps & ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
     <button {...buttonAttributes}>
       <div
         className={twMerge(
-          'flex justify-center gap-3 rounded-[1.25rem] px-8 py-4 font-semibold transition-all [:hover>&]:-translate-y-1',
+          'flex justify-center gap-3 rounded-[1.25rem] px-8 py-4 font-semibold transition-all',
+          !disableAnimation && '[:hover>&]:-translate-y-1',
           withAccent
             ? light
               ? 'bg-white text-black [:hover>&]:bg-white/80'
-              : 'bg-accent [:hover>&]:bg-accent-hover'
+              : 'bg-accent text-white [:hover>&]:bg-accent-hover'
             : light
-              ? 'border-2 border-white [:hover>&]:bg-accent-hover/10'
-              : 'border-2 border-accent [:hover>&]:bg-accent-hover/10',
+              ? 'border-2 border-white text-white [:hover>&]:bg-accent-hover/10'
+              : 'border-2 border-accent text-white [:hover>&]:bg-accent-hover/10',
         )}
       >
         {icon && (

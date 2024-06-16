@@ -1,11 +1,8 @@
-import { useId } from 'react';
+import Media from 'react-media';
 import promoImage from '../../assets/weekly-digest-promo.jpg';
-import emailIcon from '../../assets/button-icons/email-icon.svg';
-import ActionButton from '../common/ActionButton';
+import WeeklyDigestForm from './WeeklyDigestForm';
 
 const WeeklyDigestSection = () => {
-  const emailInputId = useId();
-
   return (
     <section className="px-8 py-10 sm:px-[4.5rem] sm:pb-20 lg:px-[7.25rem]">
       <div className="flex flex-col gap-[1.875rem] sm:flex-row sm:rounded-[1.25rem] sm:bg-background-secondary sm:px-[1.875rem] sm:py-10 lg:gap-20 lg:p-[3.75rem]">
@@ -21,29 +18,24 @@ const WeeklyDigestSection = () => {
             Get exclusive promotions & updates straight to your inbox.
           </p>
 
-          <form className="flex flex-col gap-y-4 lg:flex-row">
-            <label htmlFor={emailInputId} className="offscreen">
-              Enter Your Email Address
-            </label>
-            <input
-              id={emailInputId}
-              type="email"
-              required
-              placeholder="Enter Your Email Address"
-              className="py-3 lg:rounded-r-none lg:py-4"
-            />
-
-            <div className="sm:rounded-r-[1.25rem] lg:bg-white">
-              <ActionButton
-                type="submit"
-                icon={emailIcon}
-                withAccent
-                className="w-full *:py-3 lg:*:py-4 xl:*:px-12"
-              >
-                <span className="lg:hidden xl:inline">Subscribe</span>
-              </ActionButton>
-            </div>
-          </form>
+          <Media
+            queries={{
+              large: '(min-width: 1024px)',
+              extraLarge: '(min-width: 1130px)',
+            }}
+          >
+            {(matches) => (
+              <WeeklyDigestForm
+                style={
+                  matches.extraLarge
+                    ? 'horizontal'
+                    : matches.large
+                      ? 'horizontal-compact'
+                      : 'vertical'
+                }
+              />
+            )}
+          </Media>
         </div>
       </div>
     </section>

@@ -7,16 +7,16 @@ import Media from 'react-media';
 import ActionButton from '../common/ActionButton';
 import Icon from '../common/Icon';
 
-interface Item {
+interface Link {
   name: string;
   link: string;
 }
-const navItems: Item[] = [
+const navLinks: Link[] = [
   { name: 'Marketplace', link: '/' },
   { name: 'Rankings', link: '/' },
   { name: 'Connect a wallet', link: '/' },
 ];
-const menuItems: Item[] = [...navItems, { name: 'Sign up', link: '/' }];
+const menuLinks: Link[] = [...navLinks, { name: 'Sign up', link: '/' }];
 
 interface MenuProps {
   isOpen?: boolean;
@@ -30,7 +30,7 @@ const Menu = ({ isOpen }: MenuProps) => {
           isOpen ? 'translate-y-0' : 'translate-y-[-120%]',
         )}
       >
-        {menuItems.map((item) => (
+        {menuLinks.map((item) => (
           <li
             key={item.name}
             className="px-8 py-2.5 text-center transition-colors hover:bg-white/10"
@@ -49,7 +49,7 @@ const Nav = () => {
   return (
     <nav role="navigation">
       <ul className="flex">
-        {navItems.map((item) => (
+        {navLinks.map((item) => (
           <li key={item.name}>
             <a href={item.link} className="block px-5 hover:underline">
               {item.name}
