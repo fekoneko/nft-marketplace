@@ -1,4 +1,4 @@
-import { HTMLAttributes, ReactNode } from 'react';
+import { ButtonHTMLAttributes, ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 import Icon from './Icon';
 
@@ -14,7 +14,7 @@ const ActionButton = ({
   withAccent,
   light,
   ...buttonAttributes
-}: ActionButtonProps & HTMLAttributes<HTMLButtonElement>) => {
+}: ActionButtonProps & ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
     <button {...buttonAttributes}>
       <div

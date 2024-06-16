@@ -5,6 +5,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  input,
+  textarea {
+    @apply min-w-0 rounded-[1.25rem] bg-white px-5 py-4 text-black placeholder:text-text-secondary;
+  }
+}
+
 @layer components {
   .hide-svg-blur {
     border: 0;
@@ -30,5 +37,13 @@
   .svg-blur {
     -webkit-filter: url('#svg-blur');
     filter: url('#svg-blur');
+  }
+
+  .offscreen {
+    position: absolute;
+    left: -999999px;
+    top: -999999px;
+    width: 1px;
+    height: 1px;
   }
 }

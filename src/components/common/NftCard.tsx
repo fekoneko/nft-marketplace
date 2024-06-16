@@ -15,7 +15,7 @@ const NftCard = ({
     <figure
       {...figureAttributes}
       className={twMerge(
-        'bg-background-secondary overflow-hidden rounded-[1.25rem]',
+        'overflow-hidden rounded-[1.25rem] bg-background-secondary',
         figureAttributes.className,
       )}
     >
@@ -36,11 +36,11 @@ const NftCard = ({
         {detailed && (
           <div className="mt-4 flex justify-between font-mono">
             <div>
-              <p className="text-text-secondary text-sm">Price</p>
+              <p className="text-sm text-text-secondary">Price</p>
               <p>{nft.price} EHT</p>
             </div>
             <div className="text-right">
-              <p className="text-text-secondary text-sm">Highest Bid</p>
+              <p className="text-sm text-text-secondary">Highest Bid</p>
               <p>{nft.highestBid} wETH</p>
             </div>
           </div>

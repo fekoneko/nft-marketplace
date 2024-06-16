@@ -5,6 +5,7 @@ import CategoriesSection from '../components/homepage/CategoriesSection';
 import NftsSection from '../components/homepage/NftsSection';
 import AuctionSection from '../components/homepage/AuctionSection';
 import HowItWorksSection from '../components/homepage/HowItWorksSection';
+import WeeklyDigestSection from '../components/homepage/WeeklyDigestSection';
 
 const Homepage = () => {
   return (
@@ -16,6 +17,7 @@ const Homepage = () => {
       <NftsSection />
       <AuctionSection />
       <HowItWorksSection />
+      <WeeklyDigestSection />
     </main>
   );
 };
