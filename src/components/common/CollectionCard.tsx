@@ -1,7 +1,7 @@
 import { Collection } from '../../@types/globals';
 
 const PreviewPlaceholder = () => {
-  return <div className="bg-background-secondary aspect-square rounded-[1.25rem]" />;
+  return <div className="aspect-square rounded-[1.25rem] bg-background-secondary" />;
 };
 
 export interface CollectionCardProps {
@@ -18,13 +18,13 @@ const CollectionCard = ({ collection }: CollectionCardProps) => {
                 key={index}
                 src={preview}
                 alt=""
-                className="aspect-square w-full rounded-[1.25rem] object-cover"
+                className="aspect-square w-full rounded-[1.25rem] object-cover transition-transform duration-300 [:hover>*>&]:first:-translate-y-4 [:hover>*>&]:first:scale-110"
               />
             ) : (
               <PreviewPlaceholder key={index} />
             ),
         )}
-        <div className="bg-accent flex items-center justify-center rounded-[1.25rem] font-mono text-2xl">
+        <div className="flex items-center justify-center rounded-[1.25rem] bg-accent font-mono text-2xl">
           <p>{collection.size - 3}+</p>
         </div>
       </div>

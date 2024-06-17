@@ -15,7 +15,7 @@ const CategoryCard = ({
     <figure
       {...figureAttributes}
       className={twMerge(
-        'overflow-hidden rounded-[1.25rem] bg-background-secondary',
+        'hover:bg-background-secondary-hover overflow-hidden rounded-[1.25rem] bg-background-secondary transition-all duration-300 hover:-translate-y-2',
         figureAttributes.className,
       )}
     >

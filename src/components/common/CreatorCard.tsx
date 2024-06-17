@@ -17,7 +17,7 @@ const CreatorCard = ({
     <figure
       {...figureAttributes}
       className={twMerge(
-        'relative flex items-center gap-5 overflow-hidden rounded-[1.25rem] bg-background-secondary p-5',
+        'hover:bg-background-secondary-hover relative flex items-center gap-5 overflow-hidden rounded-[1.25rem] bg-background-secondary p-5 transition-all duration-300 hover:-translate-y-2',
         !compact && 'flex-col',
         figureAttributes.className,
       )}

@@ -49,10 +49,13 @@ const Menu = ({ isOpen }: MenuProps) => {
 const Nav = () => {
   return (
     <nav role="navigation">
-      <ul className="flex">
+      <ul className="flex size-full">
         {navLinks.map((item) => (
           <li key={item.name}>
-            <a href={item.link} className="block px-5 hover:underline">
+            <a
+              href={item.link}
+              className="flex h-full items-center px-5 transition-all duration-200 hover:-translate-y-1 hover:text-accent"
+            >
               {item.name}
             </a>
           </li>
@@ -75,7 +78,7 @@ const Header = () => {
         </a>
 
         {minWidth >= breakpoints.lg && (
-          <div className="flex items-center gap-2">
+          <div className="flex gap-2">
             <Nav />
             <ActionButton icon={userIcon} withAccent>
               Sign Up

@@ -7,6 +7,7 @@ const config: Config = {
       colors: {
         background: '#2b2b2b',
         'background-secondary': '#3b3b3b',
+        'background-secondary-hover': '#474747',
         text: '#ffffff',
         'text-secondary': '#858584',
         'text-footer': '#cccccc',

@@ -10,6 +10,7 @@ const Icon = ({ src, ...divAttributes }: IconProps & HTMLAttributes<HTMLDivEleme
       style={{
         mask: `url("${src}") no-repeat center`,
         WebkitMask: `url("${src}") no-repeat center`,
+        maskSize: 'contain',
       }}
     />
   );
