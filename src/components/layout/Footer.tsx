@@ -3,8 +3,9 @@ import discordIcon from '../../assets/social-media-icons/discord.svg';
 import youtubeIcon from '../../assets/social-media-icons/youtube.svg';
 import twitterIcon from '../../assets/social-media-icons/twitter.svg';
 import instagramIcon from '../../assets/social-media-icons/instagram.svg';
-import Media from 'react-media';
 import WeeklyDigestForm from '../homepage/WeeklyDigestForm';
+import { useBreakpoint } from 'use-breakpoint';
+import { breakpoints } from '../../lib/use-breakpoint';
 
 interface Link {
   name: string;
@@ -27,10 +28,12 @@ const socialMediaLinks: LinkWithIcon[] = [
 ];
 
 const Footer = () => {
+  const { minWidth } = useBreakpoint(breakpoints, 'xs');
+
   return (
     <footer
       role="contentinfo"
-      className="text-text-footer bg-background-secondary px-8 py-10 leading-[1.4rem] sm:px-[4.5rem] md:px-[7.25rem]"
+      className="bg-background-secondary px-8 py-10 leading-[1.4rem] text-text-footer sm:px-[4.5rem] md:px-[7.25rem]"
     >
       <div className="mb-[1.875rem] flex flex-col justify-between gap-[1.875rem] sm:mb-12 md:mb-[1.875rem] md:flex-row lg:gap-16">
         <section className="flex min-w-56 flex-col gap-5 md:basis-64">
@@ -76,29 +79,21 @@ const Footer = () => {
           </h1>
           <p className="lg:max-w-80">Get exclusive promotions & updates straight to your inbox.</p>
 
-          <Media
-            queries={{
-              medium: '(min-width: 640px) and (max-width: 920px)',
-              mediumLarge: '(min-width: 920px)',
-              large: '(min-width: 1024px)',
-            }}
-          >
-            {(matches) => (
-              <WeeklyDigestForm
-                style={
-                  matches.large || matches.medium
+          <WeeklyDigestForm
+            style={
+              minWidth < breakpoints.sm
+                ? 'vertical'
+                : minWidth >= breakpoints.md
+                  ? minWidth >= breakpoints.lg
                     ? 'horizontal-no-icon'
-                    : matches.mediumLarge
-                      ? 'horizontal-compact'
-                      : 'vertical'
-                }
-              />
-            )}
-          </Media>
+                    : 'horizontal-compact'
+                  : 'horizontal-no-icon'
+            }
+          />
         </section>
       </div>
 
-      <div className="border-text-footer border-t pt-5 text-xs">
+      <div className="border-t border-text-footer pt-5 text-xs">
         Ⓒ NFT Market. Use this template freely.
       </div>
     </footer>

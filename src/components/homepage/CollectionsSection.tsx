@@ -1,6 +1,7 @@
-import Media from 'react-media';
 import { Collection } from '../../@types/globals';
 import CollectionCard from '../common/CollectionCard';
+import { breakpoints } from '../../lib/use-breakpoint';
+import { useBreakpoint } from 'use-breakpoint';
 
 const collections: Collection[] = [
   {
@@ -48,28 +49,23 @@ const collections: Collection[] = [
 ];
 
 const CollectionsSection = () => {
-  return (
-    <Media
-      queries={{
-        small: '(max-width: 640px)',
-        large: '(min-width: 1024px)',
-      }}
-    >
-      {(matches) => (
-        <section className="px-8 py-10 sm:px-[4.5rem] lg:px-[7.25rem] lg:py-20">
-          <h1 className="mb-1.5 text-3xl font-semibold lg:text-4xl">Trending Collection</h1>
-          <p className="mb-9 text-lg lg:mb-[3.75rem] lg:text-2xl">
-            Checkout Our Weekly Updated Trending Collection
-          </p>
+  const { minWidth } = useBreakpoint(breakpoints, 'xs');
 
-          <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
-            {collections.slice(0, matches.small ? 1 : matches.large ? 3 : 2).map((collection) => (
-              <CollectionCard key={collection.title} collection={collection} />
-            ))}
-          </div>
-        </section>
-      )}
-    </Media>
+  return (
+    <section className="px-8 py-10 sm:px-[4.5rem] lg:px-[7.25rem] lg:py-20">
+      <h1 className="mb-1.5 text-3xl font-semibold lg:text-4xl">Trending Collection</h1>
+      <p className="mb-9 text-lg lg:mb-[3.75rem] lg:text-2xl">
+        Checkout Our Weekly Updated Trending Collection
+      </p>
+
+      <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
+        {collections
+          .slice(0, minWidth < breakpoints.sm ? 1 : minWidth >= breakpoints.lg ? 3 : 2)
+          .map((collection) => (
+            <CollectionCard key={collection.title} collection={collection} />
+          ))}
+      </div>
+    </section>
   );
 };
 export default CollectionsSection;

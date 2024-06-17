@@ -2,7 +2,8 @@ import { Nft } from '../../@types/globals';
 import ActionButton from '../common/ActionButton';
 import NftCard from '../common/NftCard';
 import getStartedIcon from '../../assets/button-icons/get-started-icon.svg';
-import Media from 'react-media';
+import { breakpoints } from '../../lib/use-breakpoint';
+import { useBreakpoint } from 'use-breakpoint';
 
 const highlightedNft: Nft = {
   image: '/nfts/space-walking-by-animakid.jpg',
@@ -44,30 +45,36 @@ const Stats = () => {
 };
 
 const WelcomeSection = () => {
+  const { minWidth } = useBreakpoint(breakpoints, 'xs');
+
   return (
-    <Media queries={{ medium: '(min-width: 640px)' }}>
-      {(matches) => (
-        <section className="flex flex-col gap-10 px-8 py-10 sm:flex-row sm:items-start sm:px-[4.5rem] sm:py-20 lg:px-[7.25rem]">
-          <div className="flex basis-1/2 flex-col gap-5 lg:gap-8">
-            <h1 className="text-3xl font-semibold leading-10 sm:text-4xl lg:-mb-2 lg:text-5xl lg:leading-[3.6rem] xl:text-6xl xl:leading-[4.6rem]">
-              Discover Digital Art & Collect NFTs
-            </h1>
-            <p className="lg:text-2xl">
-              NFT Marketplace UI Created With Anima For Figma. Collect, Buy And Sell Art From More
-              Than 240k NFT Artists.
-            </p>
+    <section className="flex flex-col gap-10 px-8 py-10 sm:flex-row sm:items-start sm:px-[4.5rem] sm:py-20 lg:px-[7.25rem]">
+      <div className="flex basis-1/2 flex-col gap-5 lg:gap-8">
+        <h1 className="text-3xl font-semibold leading-10 sm:text-4xl lg:-mb-2 lg:text-5xl lg:leading-[3.6rem] xl:text-6xl xl:leading-[4.6rem]">
+          Discover Digital Art & Collect NFTs
+        </h1>
+        <p className="lg:text-2xl">
+          NFT Marketplace UI Created With Anima For Figma. Collect, Buy And Sell Art From More Than
+          240k NFT Artists.
+        </p>
 
-            {matches.medium && <GetStartedButton />}
-            {matches.medium && <Stats />}
-          </div>
+        {minWidth >= breakpoints.sm && (
+          <>
+            <GetStartedButton />
+            <Stats />
+          </>
+        )}
+      </div>
 
-          <NftCard nft={highlightedNft} className="basis-1/2" />
+      <NftCard nft={highlightedNft} className="basis-1/2" />
 
-          {!matches.medium && <GetStartedButton />}
-          {!matches.medium && <Stats />}
-        </section>
+      {minWidth < breakpoints.sm && (
+        <>
+          <GetStartedButton />
+          <Stats />
+        </>
       )}
-    </Media>
+    </section>
   );
 };
 export default WelcomeSection;

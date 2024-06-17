@@ -1,6 +1,7 @@
-import Media from 'react-media';
 import { Category } from '../../@types/globals';
 import CategoryCard from '../common/CategoryCard';
+import { breakpoints } from '../../lib/use-breakpoint';
+import { useBreakpoint } from 'use-breakpoint';
 
 const categories: Category[] = [
   {
@@ -46,22 +47,22 @@ const categories: Category[] = [
 ];
 
 const CategoriesSection = () => {
-  return (
-    <Media queries={{ large: '(min-width: 1024px)' }}>
-      {(matches) => (
-        <section className="px-8 py-10 sm:px-[4.5rem] lg:px-[7.25rem] lg:py-20">
-          <h1 className="mb-9 text-3xl font-semibold lg:mb-[3.75rem] lg:text-4xl">
-            Browse Categories
-          </h1>
+  const { minWidth } = useBreakpoint(breakpoints, 'xs');
 
-          <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 sm:gap-7 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4">
-            {categories.map((category) => (
-              <CategoryCard key={category.title} category={category} compact={!matches.large} />
-            ))}
-          </div>
-        </section>
-      )}
-    </Media>
+  return (
+    <section className="px-8 py-10 sm:px-[4.5rem] lg:px-[7.25rem] lg:py-20">
+      <h1 className="mb-9 text-3xl font-semibold lg:mb-[3.75rem] lg:text-4xl">Browse Categories</h1>
+
+      <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 sm:gap-7 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4">
+        {categories.map((category) => (
+          <CategoryCard
+            key={category.title}
+            category={category}
+            compact={minWidth < breakpoints.lg}
+          />
+        ))}
+      </div>
+    </section>
   );
 };
 export default CategoriesSection;

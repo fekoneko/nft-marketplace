@@ -9,7 +9,7 @@ Stack:
 - React
 - Tailwind CSS
 - tailwind-merge
-- react-media
+- use-breakpoint
 - TypeScript
 - ESLint
 - Prettier
