@@ -19,7 +19,7 @@ const highlightedNft: Nft = {
 
 const GetStartedButton = () => {
   return (
-    <ActionButton icon={getStartedIcon} withAccent className="sm:self-start sm:*:px-12">
+    <ActionButton icon={getStartedIcon} withAccent className="sm:self-start">
       Get Started
     </ActionButton>
   );

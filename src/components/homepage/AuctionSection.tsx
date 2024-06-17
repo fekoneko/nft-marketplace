@@ -19,7 +19,7 @@ const auctionNft: Nft = {
 
 const SeeNftButton = () => {
   return (
-    <ActionButton icon={seeAllIcon} withAccent light className="*:px-12">
+    <ActionButton icon={seeAllIcon} withAccent light>
       See NFT
     </ActionButton>
   );

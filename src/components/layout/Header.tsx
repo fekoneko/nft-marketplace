@@ -80,7 +80,7 @@ const Header = () => {
         {minWidth >= breakpoints.lg && (
           <div className="flex gap-2">
             <Nav />
-            <ActionButton icon={userIcon} withAccent>
+            <ActionButton icon={userIcon} withAccent className="px-8">
               Sign Up
             </ActionButton>
           </div>

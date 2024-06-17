@@ -28,7 +28,7 @@ const WeeklyDigestForm = ({ style }: WeeklyDigestFormProps) => {
           icon={style !== 'horizontal-no-icon' ? emailIcon : undefined}
           withAccent
           disableAnimation
-          className={twMerge('w-full *:py-3', style !== 'vertical' && '*:px-12 *:py-4')}
+          className={twMerge('w-full py-3', style !== 'vertical' && 'py-4')}
         >
           <span className={style === 'horizontal-compact' ? 'hidden' : undefined}>Subscribe</span>
         </ActionButton>
