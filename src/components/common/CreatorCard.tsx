@@ -12,6 +12,7 @@ export interface CreatorCardProps {
   topRank?: number;
   compact?: boolean;
 }
+
 const CreatorCard: FC<CreatorCardProps & HTMLAttributes<HTMLElement>> = ({
   creator,
   topRank,

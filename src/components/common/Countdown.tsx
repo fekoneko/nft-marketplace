@@ -11,6 +11,7 @@ export interface CountdownProps {
   initialTime: number;
   caption?: string;
 }
+
 const Countdown: FC<CountdownProps> = ({ initialTime, caption }) => {
   const [hours, setHours] = useState(59);
   const [minutes, setMinutes] = useState(59);
@@ -36,6 +37,7 @@ const Countdown: FC<CountdownProps> = ({ initialTime, caption }) => {
   useLayoutEffect(() => {
     if (minutes === 0) setHours((prev) => prev - 1);
   }, [minutes]);
+
   return (
     <div className="flex justify-center rounded-[1.25rem] bg-background-secondary/50 p-[1.875rem] font-mono">
       <div className="flex flex-col gap-2.5">

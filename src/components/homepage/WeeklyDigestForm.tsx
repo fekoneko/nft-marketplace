@@ -6,6 +6,7 @@ import { twMerge } from 'tailwind-merge';
 export interface WeeklyDigestFormProps {
   style?: 'horizontal' | 'horizontal-compact' | 'horizontal-no-icon' | 'vertical';
 }
+
 const WeeklyDigestForm: FC<WeeklyDigestFormProps> = ({ style }) => {
   const emailInputId = useId();
 

@@ -22,6 +22,7 @@ const menuLinks: Link[] = [...navLinks, { name: 'Sign up', link: '/' }];
 interface MenuProps {
   isOpen?: boolean;
 }
+
 const Menu: FC<MenuProps> = ({ isOpen }) => (
   <nav role="navigation" className="relative">
     <ul

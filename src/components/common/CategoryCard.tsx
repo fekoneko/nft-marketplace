@@ -11,6 +11,7 @@ export interface NftCardProps {
   category: Category;
   compact?: boolean;
 }
+
 const CategoryCard: FC<NftCardProps & HTMLAttributes<HTMLElement>> = ({
   category,
   compact,

@@ -9,6 +9,7 @@ export interface ActionButtonProps {
   light?: boolean;
   disableAnimation?: boolean;
 }
+
 const ActionButton: FC<ActionButtonProps & ButtonHTMLAttributes<HTMLButtonElement>> = ({
   icon,
   children,

@@ -32,6 +32,7 @@ const steps: Step[] = [
 interface StepCardProps {
   step: Step;
 }
+
 const StepCard: FC<StepCardProps> = ({ step }) => (
   <figure className="flex items-center gap-5 overflow-hidden rounded-[1.25rem] bg-background-secondary p-5 sm:flex-col sm:pb-[1.875rem] sm:pt-2.5 lg:px-[1.875rem]">
     <img src={step.image} alt="" className="aspect-square min-w-0 max-w-[6.25rem] sm:max-w-full" />

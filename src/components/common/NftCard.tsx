@@ -14,6 +14,7 @@ export interface NftCardProps {
   nft: Nft;
   detailed?: boolean;
 }
+
 const NftCard: FC<NftCardProps & HTMLAttributes<HTMLElement>> = ({
   nft,
   detailed,

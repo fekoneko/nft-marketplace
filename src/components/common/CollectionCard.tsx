@@ -15,6 +15,7 @@ const PreviewPlaceholder: FC = () => (
 export interface CollectionCardProps {
   collection: Collection;
 }
+
 const CollectionCard: FC<CollectionCardProps> = ({ collection }) => (
   <figure className="flex flex-col gap-3.5">
     <div className="grid grid-cols-3 gap-3.5 first:*:col-span-3">
