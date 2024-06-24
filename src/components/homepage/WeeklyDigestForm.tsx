@@ -1,4 +1,4 @@
-import { useId } from 'react';
+import { FC, useId } from 'react';
 import ActionButton from '../common/ActionButton';
 import emailIcon from '../../assets/button-icons/email-icon.svg';
 import { twMerge } from 'tailwind-merge';
@@ -6,7 +6,7 @@ import { twMerge } from 'tailwind-merge';
 export interface WeeklyDigestFormProps {
   style?: 'horizontal' | 'horizontal-compact' | 'horizontal-no-icon' | 'vertical';
 }
-const WeeklyDigestForm = ({ style }: WeeklyDigestFormProps) => {
+const WeeklyDigestForm: FC<WeeklyDigestFormProps> = ({ style }) => {
   const emailInputId = useId();
 
   return (

@@ -1,4 +1,4 @@
-import { ButtonHTMLAttributes, ReactNode } from 'react';
+import { ButtonHTMLAttributes, FC, ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 import Icon from './Icon';
 
@@ -9,14 +9,14 @@ export interface ActionButtonProps {
   light?: boolean;
   disableAnimation?: boolean;
 }
-const ActionButton = ({
+const ActionButton: FC<ActionButtonProps & ButtonHTMLAttributes<HTMLButtonElement>> = ({
   icon,
   children,
   withAccent,
   light,
   disableAnimation,
   ...buttonAttributes
-}: ActionButtonProps & ButtonHTMLAttributes<HTMLButtonElement>) => (
+}) => (
   <button
     {...buttonAttributes}
     className={twMerge(

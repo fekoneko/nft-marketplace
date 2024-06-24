@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import { Creator } from './CreatorCard';
 
 export interface Collection {
@@ -7,14 +8,14 @@ export interface Collection {
   size: number;
 }
 
-const PreviewPlaceholder = () => (
+const PreviewPlaceholder: FC = () => (
   <div className="aspect-square rounded-[1.25rem] bg-background-secondary" />
 );
 
 export interface CollectionCardProps {
   collection: Collection;
 }
-const CollectionCard = ({ collection }: CollectionCardProps) => (
+const CollectionCard: FC<CollectionCardProps> = ({ collection }) => (
   <figure className="flex flex-col gap-3.5">
     <div className="grid grid-cols-3 gap-3.5 first:*:col-span-3">
       {[collection.previews[0], collection.previews[1], collection.previews[2]].map(

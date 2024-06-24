@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from 'react';
+import { FC, useEffect, useLayoutEffect, useState } from 'react';
 
 const formatTimerNumber = (number: number) => {
   if (number < 0) return '00';
@@ -11,7 +11,7 @@ export interface CountdownProps {
   initialTime: number;
   caption?: string;
 }
-const Countdown = ({ initialTime, caption }: CountdownProps) => {
+const Countdown: FC<CountdownProps> = ({ initialTime, caption }) => {
   const [hours, setHours] = useState(59);
   const [minutes, setMinutes] = useState(59);
   const [seconds, setSeconds] = useState(59);

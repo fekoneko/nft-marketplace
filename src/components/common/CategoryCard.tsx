@@ -1,4 +1,4 @@
-import { HTMLAttributes } from 'react';
+import { FC, HTMLAttributes } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 export interface Category {
@@ -11,11 +11,11 @@ export interface NftCardProps {
   category: Category;
   compact?: boolean;
 }
-const CategoryCard = ({
+const CategoryCard: FC<NftCardProps & HTMLAttributes<HTMLElement>> = ({
   category,
   compact,
   ...figureAttributes
-}: NftCardProps & HTMLAttributes<HTMLElement>) => (
+}) => (
   <figure
     {...figureAttributes}
     className={twMerge(

@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import ActionButton from '../common/ActionButton';
 import NftCard, { Nft } from '../common/NftCard';
 import getStartedIcon from '../../assets/button-icons/get-started-icon.svg';
@@ -16,13 +17,13 @@ const highlightedNft: Nft = {
   highestBid: 0.33,
 };
 
-const GetStartedButton = () => (
+const GetStartedButton: FC = () => (
   <ActionButton icon={getStartedIcon} withAccent className="sm:self-start">
     Get Started
   </ActionButton>
 );
 
-const Stats = () => (
+const Stats: FC = () => (
   <div className="flex justify-between gap-2">
     <div className="min-w-max basis-[5.625rem] lg:basis-[9.375rem]">
       <p className="font-mono text-2xl font-bold lg:text-3xl">240k+</p>
@@ -39,7 +40,7 @@ const Stats = () => (
   </div>
 );
 
-const WelcomeSection = () => {
+const WelcomeSection: FC = () => {
   const { minWidth } = useBreakpoint(breakpoints, 'xs');
 
   return (

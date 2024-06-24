@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import ActionButton from '../common/ActionButton';
 import seeAllIcon from '../../assets/button-icons/see-all-icon.svg';
 import { Nft } from '../common/NftCard';
@@ -17,13 +18,13 @@ const auctionNft: Nft = {
   highestBid: 0.33,
 };
 
-const SeeNftButton = () => (
+const SeeNftButton: FC = () => (
   <ActionButton icon={seeAllIcon} withAccent light>
     See NFT
   </ActionButton>
 );
 
-const AuctionSection = () => {
+const AuctionSection: FC = () => {
   const { minWidth } = useBreakpoint(breakpoints, 'xs');
 
   return (

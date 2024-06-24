@@ -1,9 +1,9 @@
-import { HTMLAttributes } from 'react';
+import { FC, HTMLAttributes } from 'react';
 
 export interface IconProps {
   src: string;
 }
-const Icon = ({ src, ...divAttributes }: IconProps & HTMLAttributes<HTMLDivElement>) => (
+const Icon: FC<IconProps & HTMLAttributes<HTMLDivElement>> = ({ src, ...divAttributes }) => (
   <div
     {...divAttributes}
     style={{

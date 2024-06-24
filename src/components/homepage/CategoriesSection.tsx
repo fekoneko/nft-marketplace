@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import CategoryCard, { Category } from '../common/CategoryCard';
 import { breakpoints } from '../../lib/use-breakpoint';
 import { useBreakpoint } from 'use-breakpoint';
@@ -45,7 +46,7 @@ const categories: Category[] = [
   },
 ];
 
-const CategoriesSection = () => {
+const CategoriesSection: FC = () => {
   const { minWidth } = useBreakpoint(breakpoints, 'xs');
 
   return (

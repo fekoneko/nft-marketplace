@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import WelcomeSection from '../components/homepage/WelcomeSection';
 import CollectionsSection from '../components/homepage/CollectionsSection';
 import CreatorsSection from '../components/homepage/CreatorsSection';
@@ -7,7 +8,7 @@ import AuctionSection from '../components/homepage/AuctionSection';
 import HowItWorksSection from '../components/homepage/HowItWorksSection';
 import WeeklyDigestSection from '../components/homepage/WeeklyDigestSection';
 
-const Homepage = () => (
+const Homepage: FC = () => (
   <main role="main">
     <WelcomeSection />
     <CollectionsSection />

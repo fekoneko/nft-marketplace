@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import logo from '../../assets/logo.svg';
 import discordIcon from '../../assets/social-media-icons/discord.svg';
 import youtubeIcon from '../../assets/social-media-icons/youtube.svg';
@@ -27,7 +28,7 @@ const socialMediaLinks: LinkWithIcon[] = [
   { name: 'Instagram', link: '/', icon: instagramIcon },
 ];
 
-const Footer = () => {
+const Footer: FC = () => {
   const { minWidth } = useBreakpoint(breakpoints, 'xs');
 
   return (

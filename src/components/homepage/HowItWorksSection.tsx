@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import howItWorks1Image from '../../assets/how-it-works/how-it-works-1.svg';
 import howItWorks2Image from '../../assets/how-it-works/how-it-works-2.svg';
 import howItWorks3Image from '../../assets/how-it-works/how-it-works-3.svg';
@@ -31,7 +32,7 @@ const steps: Step[] = [
 interface StepCardProps {
   step: Step;
 }
-const StepCard = ({ step }: StepCardProps) => (
+const StepCard: FC<StepCardProps> = ({ step }) => (
   <figure className="flex items-center gap-5 overflow-hidden rounded-[1.25rem] bg-background-secondary p-5 sm:flex-col sm:pb-[1.875rem] sm:pt-2.5 lg:px-[1.875rem]">
     <img src={step.image} alt="" className="aspect-square min-w-0 max-w-[6.25rem] sm:max-w-full" />
 
@@ -42,7 +43,7 @@ const StepCard = ({ step }: StepCardProps) => (
   </figure>
 );
 
-const HowItWorksSection = () => (
+const HowItWorksSection: FC = () => (
   <section className="px-8 py-10 sm:px-[4.5rem] lg:px-[7.25rem] lg:py-20">
     <h1 className="mb-1.5 text-3xl font-semibold lg:text-4xl">How It Works</h1>
     <p className="mb-9 text-lg lg:mb-[3.75rem] lg:text-2xl">Find Out How To Get Started</p>

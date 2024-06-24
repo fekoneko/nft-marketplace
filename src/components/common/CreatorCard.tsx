@@ -1,4 +1,4 @@
-import { HTMLAttributes } from 'react';
+import { FC, HTMLAttributes } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 export interface Creator {
@@ -12,12 +12,12 @@ export interface CreatorCardProps {
   topRank?: number;
   compact?: boolean;
 }
-const CreatorCard = ({
+const CreatorCard: FC<CreatorCardProps & HTMLAttributes<HTMLElement>> = ({
   creator,
   topRank,
   compact,
   ...figureAttributes
-}: CreatorCardProps & HTMLAttributes<HTMLElement>) => (
+}) => (
   <figure
     {...figureAttributes}
     className={twMerge(

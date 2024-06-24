@@ -1,4 +1,4 @@
-import { HTMLAttributes } from 'react';
+import { FC, HTMLAttributes } from 'react';
 import { Creator } from './CreatorCard';
 import { twMerge } from 'tailwind-merge';
 
@@ -14,11 +14,11 @@ export interface NftCardProps {
   nft: Nft;
   detailed?: boolean;
 }
-const NftCard = ({
+const NftCard: FC<NftCardProps & HTMLAttributes<HTMLElement>> = ({
   nft,
   detailed,
   ...figureAttributes
-}: NftCardProps & HTMLAttributes<HTMLElement>) => (
+}) => (
   <figure
     {...figureAttributes}
     className={twMerge(

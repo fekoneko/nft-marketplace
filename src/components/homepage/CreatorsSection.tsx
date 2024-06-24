@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import CreatorCard, { Creator } from '../common/CreatorCard';
 import ActionButton from '../common/ActionButton';
 import getStartedIcon from '../../assets/button-icons/get-started-icon.svg';
@@ -67,13 +68,13 @@ const creators: Creator[] = [
   },
 ];
 
-const ViewRankingsButton = () => (
+const ViewRankingsButton: FC = () => (
   <ActionButton icon={getStartedIcon} className="mt-10 w-full whitespace-nowrap sm:mt-0 sm:w-auto">
     View Rankings
   </ActionButton>
 );
 
-const CreatorsSection = () => {
+const CreatorsSection: FC = () => {
   const { minWidth } = useBreakpoint(breakpoints, 'xs');
 
   return (

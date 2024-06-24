@@ -1,3 +1,4 @@
+import { FC } from 'react';
 import ActionButton from '../common/ActionButton';
 import seeAllIcon from '../../assets/button-icons/see-all-icon.svg';
 import NftCard, { Nft } from '../common/NftCard';
@@ -40,13 +41,13 @@ const nfts: Nft[] = [
   },
 ];
 
-const SeeAllButton = () => (
+const SeeAllButton: FC = () => (
   <ActionButton icon={seeAllIcon} className="mt-10 w-full whitespace-nowrap sm:mt-0 sm:w-auto">
     See All
   </ActionButton>
 );
 
-const NftsSection = () => {
+const NftsSection: FC = () => {
   const { minWidth } = useBreakpoint(breakpoints, 'xs');
 
   return (

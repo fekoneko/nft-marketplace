@@ -1,7 +1,7 @@
 import logo from '../../assets/logo.svg';
 import hamburgerMenuIcon from '../../assets/button-icons/hamburger-menu-icon.svg';
 import userIcon from '../../assets/button-icons/user-icon.svg';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 import ActionButton from '../common/ActionButton';
 import Icon from '../common/Icon';
@@ -22,7 +22,7 @@ const menuLinks: Link[] = [...navLinks, { name: 'Sign up', link: '/' }];
 interface MenuProps {
   isOpen?: boolean;
 }
-const Menu = ({ isOpen }: MenuProps) => (
+const Menu: FC<MenuProps> = ({ isOpen }) => (
   <nav role="navigation" className="relative">
     <ul
       className={twMerge(
@@ -41,7 +41,7 @@ const Menu = ({ isOpen }: MenuProps) => (
   </nav>
 );
 
-const Nav = () => (
+const Nav: FC = () => (
   <nav role="navigation">
     <ul className="flex size-full">
       {navLinks.map((item) => (
@@ -58,7 +58,7 @@ const Nav = () => (
   </nav>
 );
 
-const Header = () => {
+const Header: FC = () => {
   const { minWidth } = useBreakpoint(breakpoints, 'xs');
   const [isMenuOpened, setIsMenuOpened] = useState(false);
 
