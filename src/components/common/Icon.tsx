@@ -5,7 +5,7 @@ export interface IconProps {
 }
 
 const Icon: FC<IconProps & HTMLAttributes<HTMLDivElement>> = ({ src, ...divAttributes }) => (
-  <div
+  <i
     {...divAttributes}
     style={{
       mask: `url("${src}") no-repeat center`,
