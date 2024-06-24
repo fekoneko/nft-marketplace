@@ -3,8 +3,8 @@ import hamburgerMenuIcon from '@//assets/button-icons/hamburger-menu-icon.svg';
 import userIcon from '@//assets/button-icons/user-icon.svg';
 import { FC, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-import ActionButton from '@/components/common/ActionButton';
-import Icon from '@/components/common/Icon';
+import { ActionButton } from '@/components/common/ActionButton';
+import { Icon } from '@/components/common/Icon';
 import { useBreakpoint } from 'use-breakpoint';
 import { BREAKPOINTS } from '@/lib/use-breakpoint';
 
@@ -59,7 +59,7 @@ const Nav: FC = () => (
   </nav>
 );
 
-const Header: FC = () => {
+export const Header: FC = () => {
   const { minWidth } = useBreakpoint(BREAKPOINTS, 'xs');
   const [isMenuOpened, setIsMenuOpened] = useState(false);
 
@@ -91,4 +91,3 @@ const Header: FC = () => {
     </>
   );
 };
-export default Header;

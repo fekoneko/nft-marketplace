@@ -13,7 +13,7 @@ export interface CreatorCardProps {
   compact?: boolean;
 }
 
-const CreatorCard: FC<CreatorCardProps & HTMLAttributes<HTMLElement>> = ({
+export const CreatorCard: FC<CreatorCardProps & HTMLAttributes<HTMLElement>> = ({
   creator,
   topRank,
   compact,
@@ -59,4 +59,3 @@ const CreatorCard: FC<CreatorCardProps & HTMLAttributes<HTMLElement>> = ({
     </div>
   </figure>
 );
-export default CreatorCard;

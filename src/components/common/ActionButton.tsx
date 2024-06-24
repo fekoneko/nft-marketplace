@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, FC, ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
-import Icon from '@/components/common/Icon';
+import { Icon } from '@/components/common/Icon';
 
 export interface ActionButtonProps {
   icon?: string;
@@ -10,7 +10,7 @@ export interface ActionButtonProps {
   disableAnimation?: boolean;
 }
 
-const ActionButton: FC<ActionButtonProps & ButtonHTMLAttributes<HTMLButtonElement>> = ({
+export const ActionButton: FC<ActionButtonProps & ButtonHTMLAttributes<HTMLButtonElement>> = ({
   icon,
   children,
   withAccent,
@@ -42,4 +42,3 @@ const ActionButton: FC<ActionButtonProps & ButtonHTMLAttributes<HTMLButtonElemen
     {children}
   </button>
 );
-export default ActionButton;

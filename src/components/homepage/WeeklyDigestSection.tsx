@@ -1,10 +1,10 @@
 import { FC } from 'react';
 import { useBreakpoint } from 'use-breakpoint';
 import promoImage from '@/assets/weekly-digest-promo.jpg';
-import WeeklyDigestForm from '@/components/homepage/WeeklyDigestForm';
+import { WeeklyDigestForm } from '@/components/homepage/WeeklyDigestForm';
 import { BREAKPOINTS } from '@/lib/use-breakpoint';
 
-const WeeklyDigestSection: FC = () => {
+export const WeeklyDigestSection: FC = () => {
   const { minWidth } = useBreakpoint(BREAKPOINTS, 'xs');
 
   return (
@@ -36,4 +36,3 @@ const WeeklyDigestSection: FC = () => {
     </section>
   );
 };
-export default WeeklyDigestSection;

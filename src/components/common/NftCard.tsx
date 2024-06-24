@@ -15,7 +15,7 @@ export interface NftCardProps {
   detailed?: boolean;
 }
 
-const NftCard: FC<NftCardProps & HTMLAttributes<HTMLElement>> = ({
+export const NftCard: FC<NftCardProps & HTMLAttributes<HTMLElement>> = ({
   nft,
   detailed,
   ...figureAttributes
@@ -56,4 +56,3 @@ const NftCard: FC<NftCardProps & HTMLAttributes<HTMLElement>> = ({
     </div>
   </figure>
 );
-export default NftCard;

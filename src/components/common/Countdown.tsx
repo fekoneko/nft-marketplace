@@ -12,7 +12,7 @@ export interface CountdownProps {
   caption?: string;
 }
 
-const Countdown: FC<CountdownProps> = ({ initialTime, caption }) => {
+export const Countdown: FC<CountdownProps> = ({ initialTime, caption }) => {
   const [hours, setHours] = useState(59);
   const [minutes, setMinutes] = useState(59);
   const [seconds, setSeconds] = useState(59);
@@ -63,4 +63,3 @@ const Countdown: FC<CountdownProps> = ({ initialTime, caption }) => {
     </div>
   );
 };
-export default Countdown;

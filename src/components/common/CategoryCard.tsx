@@ -12,7 +12,7 @@ export interface NftCardProps {
   compact?: boolean;
 }
 
-const CategoryCard: FC<NftCardProps & HTMLAttributes<HTMLElement>> = ({
+export const CategoryCard: FC<NftCardProps & HTMLAttributes<HTMLElement>> = ({
   category,
   compact,
   ...figureAttributes
@@ -41,4 +41,3 @@ const CategoryCard: FC<NftCardProps & HTMLAttributes<HTMLElement>> = ({
     </figcaption>
   </figure>
 );
-export default CategoryCard;

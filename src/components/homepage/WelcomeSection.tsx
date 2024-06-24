@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import ActionButton from '@/components/common/ActionButton';
-import NftCard, { Nft } from '@/components/common/NftCard';
+import { ActionButton } from '@/components/common/ActionButton';
+import { NftCard, Nft } from '@/components/common/NftCard';
 import getStartedIcon from '@/assets/button-icons/get-started-icon.svg';
 import { BREAKPOINTS } from '@/lib/use-breakpoint';
 import { useBreakpoint } from 'use-breakpoint';
@@ -40,7 +40,7 @@ const Stats: FC = () => (
   </div>
 );
 
-const WelcomeSection: FC = () => {
+export const WelcomeSection: FC = () => {
   const { minWidth } = useBreakpoint(BREAKPOINTS, 'xs');
 
   return (
@@ -73,4 +73,3 @@ const WelcomeSection: FC = () => {
     </section>
   );
 };
-export default WelcomeSection;

@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import CreatorCard, { Creator } from '@/components/common/CreatorCard';
-import ActionButton from '@/components/common/ActionButton';
+import { CreatorCard, Creator } from '@/components/common/CreatorCard';
+import { ActionButton } from '@/components/common/ActionButton';
 import getStartedIcon from '@/assets/button-icons/get-started-icon.svg';
 import { useBreakpoint } from 'use-breakpoint';
 import { BREAKPOINTS } from '@/lib/use-breakpoint';
@@ -74,7 +74,7 @@ const ViewRankingsButton: FC = () => (
   </ActionButton>
 );
 
-const CreatorsSection: FC = () => {
+export const CreatorsSection: FC = () => {
   const { minWidth } = useBreakpoint(BREAKPOINTS, 'xs');
 
   return (
@@ -113,4 +113,3 @@ const CreatorsSection: FC = () => {
     </section>
   );
 };
-export default CreatorsSection;

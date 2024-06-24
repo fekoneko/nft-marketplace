@@ -1,5 +1,5 @@
 import { FC, useId } from 'react';
-import ActionButton from '@/components/common/ActionButton';
+import { ActionButton } from '@/components/common/ActionButton';
 import emailIcon from '@/assets/button-icons/email-icon.svg';
 import { twMerge } from 'tailwind-merge';
 
@@ -7,7 +7,7 @@ export interface WeeklyDigestFormProps {
   orientation?: 'horizontal' | 'horizontal-compact' | 'horizontal-no-icon' | 'vertical';
 }
 
-const WeeklyDigestForm: FC<WeeklyDigestFormProps> = ({ orientation }) => {
+export const WeeklyDigestForm: FC<WeeklyDigestFormProps> = ({ orientation }) => {
   const emailInputId = useId();
 
   return (
@@ -39,4 +39,3 @@ const WeeklyDigestForm: FC<WeeklyDigestFormProps> = ({ orientation }) => {
     </form>
   );
 };
-export default WeeklyDigestForm;

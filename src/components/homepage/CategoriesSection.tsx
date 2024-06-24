@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import CategoryCard, { Category } from '@/components/common/CategoryCard';
+import { CategoryCard, Category } from '@/components/common/CategoryCard';
 import { BREAKPOINTS } from '@/lib/use-breakpoint';
 import { useBreakpoint } from 'use-breakpoint';
 
@@ -46,7 +46,7 @@ const categories: Category[] = [
   },
 ];
 
-const CategoriesSection: FC = () => {
+export const CategoriesSection: FC = () => {
   const { minWidth } = useBreakpoint(BREAKPOINTS, 'xs');
 
   return (
@@ -65,4 +65,3 @@ const CategoriesSection: FC = () => {
     </section>
   );
 };
-export default CategoriesSection;

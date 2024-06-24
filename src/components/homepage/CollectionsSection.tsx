@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import CollectionCard, { Collection } from '@/components/common/CollectionCard';
+import { CollectionCard, Collection } from '@/components/common/CollectionCard';
 import { BREAKPOINTS } from '@/lib/use-breakpoint';
 import { useBreakpoint } from 'use-breakpoint';
 
@@ -48,7 +48,7 @@ const collections: Collection[] = [
   },
 ];
 
-const CollectionsSection: FC = () => {
+export const CollectionsSection: FC = () => {
   const { minWidth } = useBreakpoint(BREAKPOINTS, 'xs');
 
   return (
@@ -68,4 +68,3 @@ const CollectionsSection: FC = () => {
     </section>
   );
 };
-export default CollectionsSection;

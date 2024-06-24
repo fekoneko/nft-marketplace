@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import ActionButton from '@/components/common/ActionButton';
+import { ActionButton } from '@/components/common/ActionButton';
 import seeAllIcon from '@/assets/button-icons/see-all-icon.svg';
-import NftCard, { Nft } from '@/components/common/NftCard';
+import { NftCard, Nft } from '@/components/common/NftCard';
 import { useBreakpoint } from 'use-breakpoint';
 import { BREAKPOINTS } from '@/lib/use-breakpoint';
 
@@ -47,7 +47,7 @@ const SeeAllButton: FC = () => (
   </ActionButton>
 );
 
-const NftsSection: FC = () => {
+export const NftsSection: FC = () => {
   const { minWidth } = useBreakpoint(BREAKPOINTS, 'xs');
 
   return (
@@ -72,4 +72,3 @@ const NftsSection: FC = () => {
     </section>
   );
 };
-export default NftsSection;

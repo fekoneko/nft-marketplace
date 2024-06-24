@@ -4,7 +4,7 @@ import discordIcon from '@/assets/social-media-icons/discord.svg';
 import youtubeIcon from '@/assets/social-media-icons/youtube.svg';
 import twitterIcon from '@/assets/social-media-icons/twitter.svg';
 import instagramIcon from '@/assets/social-media-icons/instagram.svg';
-import WeeklyDigestForm from '@/components/homepage/WeeklyDigestForm';
+import { WeeklyDigestForm } from '@/components/homepage/WeeklyDigestForm';
 import { useBreakpoint } from 'use-breakpoint';
 import { BREAKPOINTS } from '@/lib/use-breakpoint';
 
@@ -28,7 +28,7 @@ const socialMediaLinks: LinkWithIcon[] = [
   { name: 'Instagram', link: '/', icon: instagramIcon },
 ];
 
-const Footer: FC = () => {
+export const Footer: FC = () => {
   const { minWidth } = useBreakpoint(BREAKPOINTS, 'xs');
 
   return (
@@ -100,4 +100,3 @@ const Footer: FC = () => {
     </footer>
   );
 };
-export default Footer;

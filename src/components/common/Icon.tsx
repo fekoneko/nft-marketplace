@@ -4,7 +4,7 @@ export interface IconProps {
   src: string;
 }
 
-const Icon: FC<IconProps & HTMLAttributes<HTMLElement>> = ({ src, ...iAttributes }) => (
+export const Icon: FC<IconProps & HTMLAttributes<HTMLElement>> = ({ src, ...iAttributes }) => (
   <i
     {...iAttributes}
     style={{
@@ -14,4 +14,3 @@ const Icon: FC<IconProps & HTMLAttributes<HTMLElement>> = ({ src, ...iAttributes
     }}
   />
 );
-export default Icon;

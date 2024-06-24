@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import ActionButton from '@/components/common/ActionButton';
+import { ActionButton } from '@/components/common/ActionButton';
 import seeAllIcon from '@/assets/button-icons/see-all-icon.svg';
 import { Nft } from '@/components/common/NftCard';
-import Countdown from '@/components/common/Countdown';
+import { Countdown } from '@/components/common/Countdown';
 import { useBreakpoint } from 'use-breakpoint';
 import { BREAKPOINTS } from '@/lib/use-breakpoint';
 
@@ -24,7 +24,7 @@ const SeeNftButton: FC = () => (
   </ActionButton>
 );
 
-const AuctionSection: FC = () => {
+export const AuctionSection: FC = () => {
   const { minWidth } = useBreakpoint(BREAKPOINTS, 'xs');
 
   return (
@@ -51,4 +51,3 @@ const AuctionSection: FC = () => {
     </section>
   );
 };
-export default AuctionSection;

@@ -44,7 +44,7 @@ const StepCard: FC<StepCardProps> = ({ step }) => (
   </figure>
 );
 
-const HowItWorksSection: FC = () => (
+export const HowItWorksSection: FC = () => (
   <section className="px-8 py-10 sm:px-[4.5rem] lg:px-[7.25rem] lg:py-20">
     <h1 className="mb-1.5 text-3xl font-semibold lg:text-4xl">How It Works</h1>
     <p className="mb-9 text-lg lg:mb-[3.75rem] lg:text-2xl">Find Out How To Get Started</p>
@@ -56,4 +56,3 @@ const HowItWorksSection: FC = () => (
     </div>
   </section>
 );
-export default HowItWorksSection;
