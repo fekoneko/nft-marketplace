@@ -17,13 +17,11 @@ const auctionNft: Nft = {
   highestBid: 0.33,
 };
 
-const SeeNftButton = () => {
-  return (
-    <ActionButton icon={seeAllIcon} withAccent light>
-      See NFT
-    </ActionButton>
-  );
-};
+const SeeNftButton = () => (
+  <ActionButton icon={seeAllIcon} withAccent light>
+    See NFT
+  </ActionButton>
+);
 
 const AuctionSection = () => {
   const { minWidth } = useBreakpoint(breakpoints, 'xs');

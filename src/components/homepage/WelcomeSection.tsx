@@ -16,32 +16,28 @@ const highlightedNft: Nft = {
   highestBid: 0.33,
 };
 
-const GetStartedButton = () => {
-  return (
-    <ActionButton icon={getStartedIcon} withAccent className="sm:self-start">
-      Get Started
-    </ActionButton>
-  );
-};
+const GetStartedButton = () => (
+  <ActionButton icon={getStartedIcon} withAccent className="sm:self-start">
+    Get Started
+  </ActionButton>
+);
 
-const Stats = () => {
-  return (
-    <div className="flex justify-between gap-2">
-      <div className="min-w-max basis-[5.625rem] lg:basis-[9.375rem]">
-        <p className="font-mono text-2xl font-bold lg:text-3xl">240k+</p>
-        <p className="lg:text-[1.5rem]">Total Sale</p>
-      </div>
-      <div className="min-w-max basis-[5.625rem] lg:basis-[9.375rem]">
-        <p className="font-mono text-2xl font-bold lg:text-3xl">100k+</p>
-        <p className="lg:text-[1.5rem]">Auctions</p>
-      </div>
-      <div className="min-w-max basis-[5.625rem] lg:basis-[9.375rem]">
-        <p className="font-mono text-2xl font-bold lg:text-3xl">240k+</p>
-        <p className="lg:text-[1.5rem]">Artists</p>
-      </div>
+const Stats = () => (
+  <div className="flex justify-between gap-2">
+    <div className="min-w-max basis-[5.625rem] lg:basis-[9.375rem]">
+      <p className="font-mono text-2xl font-bold lg:text-3xl">240k+</p>
+      <p className="lg:text-[1.5rem]">Total Sale</p>
     </div>
-  );
-};
+    <div className="min-w-max basis-[5.625rem] lg:basis-[9.375rem]">
+      <p className="font-mono text-2xl font-bold lg:text-3xl">100k+</p>
+      <p className="lg:text-[1.5rem]">Auctions</p>
+    </div>
+    <div className="min-w-max basis-[5.625rem] lg:basis-[9.375rem]">
+      <p className="font-mono text-2xl font-bold lg:text-3xl">240k+</p>
+      <p className="lg:text-[1.5rem]">Artists</p>
+    </div>
+  </div>
+);
 
 const WelcomeSection = () => {
   const { minWidth } = useBreakpoint(breakpoints, 'xs');

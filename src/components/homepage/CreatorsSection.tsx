@@ -67,16 +67,11 @@ const creators: Creator[] = [
   },
 ];
 
-const ViewRankingsButton = () => {
-  return (
-    <ActionButton
-      icon={getStartedIcon}
-      className="mt-10 w-full whitespace-nowrap sm:mt-0 sm:w-auto"
-    >
-      View Rankings
-    </ActionButton>
-  );
-};
+const ViewRankingsButton = () => (
+  <ActionButton icon={getStartedIcon} className="mt-10 w-full whitespace-nowrap sm:mt-0 sm:w-auto">
+    View Rankings
+  </ActionButton>
+);
 
 const CreatorsSection = () => {
   const { minWidth } = useBreakpoint(breakpoints, 'xs');

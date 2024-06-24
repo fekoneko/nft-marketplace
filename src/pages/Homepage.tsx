@@ -7,18 +7,16 @@ import AuctionSection from '../components/homepage/AuctionSection';
 import HowItWorksSection from '../components/homepage/HowItWorksSection';
 import WeeklyDigestSection from '../components/homepage/WeeklyDigestSection';
 
-const Homepage = () => {
-  return (
-    <main role="main">
-      <WelcomeSection />
-      <CollectionsSection />
-      <CreatorsSection />
-      <CategoriesSection />
-      <NftsSection />
-      <AuctionSection />
-      <HowItWorksSection />
-      <WeeklyDigestSection />
-    </main>
-  );
-};
+const Homepage = () => (
+  <main role="main">
+    <WelcomeSection />
+    <CollectionsSection />
+    <CreatorsSection />
+    <CategoriesSection />
+    <NftsSection />
+    <AuctionSection />
+    <HowItWorksSection />
+    <WeeklyDigestSection />
+  </main>
+);
 export default Homepage;

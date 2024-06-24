@@ -40,13 +40,11 @@ const nfts: Nft[] = [
   },
 ];
 
-const SeeAllButton = () => {
-  return (
-    <ActionButton icon={seeAllIcon} className="mt-10 w-full whitespace-nowrap sm:mt-0 sm:w-auto">
-      See All
-    </ActionButton>
-  );
-};
+const SeeAllButton = () => (
+  <ActionButton icon={seeAllIcon} className="mt-10 w-full whitespace-nowrap sm:mt-0 sm:w-auto">
+    See All
+  </ActionButton>
+);
 
 const NftsSection = () => {
   const { minWidth } = useBreakpoint(breakpoints, 'xs');
