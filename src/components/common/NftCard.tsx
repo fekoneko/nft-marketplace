@@ -1,5 +1,5 @@
 import { FC, HTMLAttributes } from 'react';
-import { Creator } from './CreatorCard';
+import { Creator } from '@/components/common/CreatorCard';
 import { twMerge } from 'tailwind-merge';
 
 export interface Nft {

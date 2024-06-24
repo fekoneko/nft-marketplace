@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Creator } from './CreatorCard';
+import { Creator } from '@/components/common/CreatorCard';
 
 export interface Collection {
   title: string;

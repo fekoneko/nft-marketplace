@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import CreatorCard, { Creator } from '../common/CreatorCard';
-import ActionButton from '../common/ActionButton';
-import getStartedIcon from '../../assets/button-icons/get-started-icon.svg';
+import CreatorCard, { Creator } from '@/components/common/CreatorCard';
+import ActionButton from '@/components/common/ActionButton';
+import getStartedIcon from '@/assets/button-icons/get-started-icon.svg';
 import { useBreakpoint } from 'use-breakpoint';
-import { breakpoints } from '../../lib/use-breakpoint';
+import { breakpoints } from '@/lib/use-breakpoint';
 
 const creators: Creator[] = [
   {

@@ -1,10 +1,10 @@
 import { FC } from 'react';
-import ActionButton from '../common/ActionButton';
-import seeAllIcon from '../../assets/button-icons/see-all-icon.svg';
-import { Nft } from '../common/NftCard';
-import Countdown from '../common/Countdown';
+import ActionButton from '@/components/common/ActionButton';
+import seeAllIcon from '@/assets/button-icons/see-all-icon.svg';
+import { Nft } from '@/components/common/NftCard';
+import Countdown from '@/components/common/Countdown';
 import { useBreakpoint } from 'use-breakpoint';
-import { breakpoints } from '../../lib/use-breakpoint';
+import { breakpoints } from '@/lib/use-breakpoint';
 
 const auctionNft: Nft = {
   image: '/nfts/magic-mushrooms-1-by-shroomie.jpg',

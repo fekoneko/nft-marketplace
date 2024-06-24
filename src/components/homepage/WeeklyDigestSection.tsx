@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { useBreakpoint } from 'use-breakpoint';
-import promoImage from '../../assets/weekly-digest-promo.jpg';
-import WeeklyDigestForm from './WeeklyDigestForm';
-import { breakpoints } from '../../lib/use-breakpoint';
+import promoImage from '@/assets/weekly-digest-promo.jpg';
+import WeeklyDigestForm from '@/components/homepage/WeeklyDigestForm';
+import { breakpoints } from '@/lib/use-breakpoint';
 
 const WeeklyDigestSection: FC = () => {
   const { minWidth } = useBreakpoint(breakpoints, 'xs');

@@ -1,12 +1,12 @@
 import { FC } from 'react';
-import logo from '../../assets/logo.svg';
-import discordIcon from '../../assets/social-media-icons/discord.svg';
-import youtubeIcon from '../../assets/social-media-icons/youtube.svg';
-import twitterIcon from '../../assets/social-media-icons/twitter.svg';
-import instagramIcon from '../../assets/social-media-icons/instagram.svg';
-import WeeklyDigestForm from '../homepage/WeeklyDigestForm';
+import logo from '@/assets/logo.svg';
+import discordIcon from '@/assets/social-media-icons/discord.svg';
+import youtubeIcon from '@/assets/social-media-icons/youtube.svg';
+import twitterIcon from '@/assets/social-media-icons/twitter.svg';
+import instagramIcon from '@/assets/social-media-icons/instagram.svg';
+import WeeklyDigestForm from '@/components/homepage/WeeklyDigestForm';
 import { useBreakpoint } from 'use-breakpoint';
-import { breakpoints } from '../../lib/use-breakpoint';
+import { breakpoints } from '@/lib/use-breakpoint';
 
 interface Link {
   name: string;

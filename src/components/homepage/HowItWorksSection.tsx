@@ -1,7 +1,7 @@
 import { FC } from 'react';
-import howItWorks1Image from '../../assets/how-it-works/how-it-works-1.svg';
-import howItWorks2Image from '../../assets/how-it-works/how-it-works-2.svg';
-import howItWorks3Image from '../../assets/how-it-works/how-it-works-3.svg';
+import howItWorks1Image from '@/assets/how-it-works/how-it-works-1.svg';
+import howItWorks2Image from '@/assets/how-it-works/how-it-works-2.svg';
+import howItWorks3Image from '@/assets/how-it-works/how-it-works-3.svg';
 
 interface Step {
   headline: string;

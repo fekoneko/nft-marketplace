@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import ActionButton from '../common/ActionButton';
-import NftCard, { Nft } from '../common/NftCard';
-import getStartedIcon from '../../assets/button-icons/get-started-icon.svg';
-import { breakpoints } from '../../lib/use-breakpoint';
+import ActionButton from '@/components/common/ActionButton';
+import NftCard, { Nft } from '@/components/common/NftCard';
+import getStartedIcon from '@/assets/button-icons/get-started-icon.svg';
+import { breakpoints } from '@/lib/use-breakpoint';
 import { useBreakpoint } from 'use-breakpoint';
 
 const highlightedNft: Nft = {

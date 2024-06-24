@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import CategoryCard, { Category } from '../common/CategoryCard';
-import { breakpoints } from '../../lib/use-breakpoint';
+import CategoryCard, { Category } from '@/components/common/CategoryCard';
+import { breakpoints } from '@/lib/use-breakpoint';
 import { useBreakpoint } from 'use-breakpoint';
 
 const categories: Category[] = [

@@ -1,12 +1,12 @@
-import logo from '../../assets/logo.svg';
-import hamburgerMenuIcon from '../../assets/button-icons/hamburger-menu-icon.svg';
-import userIcon from '../../assets/button-icons/user-icon.svg';
+import logo from '@//assets/logo.svg';
+import hamburgerMenuIcon from '@//assets/button-icons/hamburger-menu-icon.svg';
+import userIcon from '@//assets/button-icons/user-icon.svg';
 import { FC, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
-import ActionButton from '../common/ActionButton';
-import Icon from '../common/Icon';
+import ActionButton from '@/components/common/ActionButton';
+import Icon from '@/components/common/Icon';
 import { useBreakpoint } from 'use-breakpoint';
-import { breakpoints } from '../../lib/use-breakpoint';
+import { breakpoints } from '@/lib/use-breakpoint';
 
 interface Link {
   name: string;

@@ -1,6 +1,6 @@
 import { FC, useId } from 'react';
-import ActionButton from '../common/ActionButton';
-import emailIcon from '../../assets/button-icons/email-icon.svg';
+import ActionButton from '@/components/common/ActionButton';
+import emailIcon from '@/assets/button-icons/email-icon.svg';
 import { twMerge } from 'tailwind-merge';
 
 export interface WeeklyDigestFormProps {

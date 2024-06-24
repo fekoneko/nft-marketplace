@@ -1,9 +1,9 @@
 import { FC } from 'react';
-import ActionButton from '../common/ActionButton';
-import seeAllIcon from '../../assets/button-icons/see-all-icon.svg';
-import NftCard, { Nft } from '../common/NftCard';
+import ActionButton from '@/components/common/ActionButton';
+import seeAllIcon from '@/assets/button-icons/see-all-icon.svg';
+import NftCard, { Nft } from '@/components/common/NftCard';
 import { useBreakpoint } from 'use-breakpoint';
-import { breakpoints } from '../../lib/use-breakpoint';
+import { breakpoints } from '@/lib/use-breakpoint';
 
 const nfts: Nft[] = [
   {

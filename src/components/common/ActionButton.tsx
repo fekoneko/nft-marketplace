@@ -1,6 +1,6 @@
 import { ButtonHTMLAttributes, FC, ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
-import Icon from './Icon';
+import Icon from '@/components/common/Icon';
 
 export interface ActionButtonProps {
   icon?: string;
