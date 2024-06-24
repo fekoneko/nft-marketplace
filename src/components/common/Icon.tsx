@@ -4,9 +4,9 @@ export interface IconProps {
   src: string;
 }
 
-const Icon: FC<IconProps & HTMLAttributes<HTMLDivElement>> = ({ src, ...divAttributes }) => (
+const Icon: FC<IconProps & HTMLAttributes<HTMLElement>> = ({ src, ...iAttributes }) => (
   <i
-    {...divAttributes}
+    {...iAttributes}
     style={{
       mask: `url("${src}") no-repeat center`,
       WebkitMask: `url("${src}") no-repeat center`,
