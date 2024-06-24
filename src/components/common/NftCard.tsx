@@ -1,6 +1,14 @@
 import { HTMLAttributes } from 'react';
-import { Nft } from '../../@types/globals';
+import { Creator } from './CreatorCard';
 import { twMerge } from 'tailwind-merge';
+
+export interface Nft {
+  image: string;
+  title: string;
+  creator: Creator;
+  price: number;
+  highestBid: number;
+}
 
 export interface NftCardProps {
   nft: Nft;
@@ -15,7 +23,7 @@ const NftCard = ({
     <figure
       {...figureAttributes}
       className={twMerge(
-        'hover:bg-background-secondary-hover overflow-hidden rounded-[1.25rem] bg-background-secondary transition-all duration-300 hover:-translate-y-2',
+        'overflow-hidden rounded-[1.25rem] bg-background-secondary transition-all duration-300 hover:-translate-y-2 hover:bg-background-secondary-hover',
         figureAttributes.className,
       )}
     >

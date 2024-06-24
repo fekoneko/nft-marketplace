@@ -1,6 +1,11 @@
 import { HTMLAttributes } from 'react';
-import { Category } from '../../@types/globals';
 import { twMerge } from 'tailwind-merge';
+
+export interface Category {
+  icon: string;
+  title: string;
+  preview: string;
+}
 
 export interface NftCardProps {
   category: Category;
@@ -15,7 +20,7 @@ const CategoryCard = ({
     <figure
       {...figureAttributes}
       className={twMerge(
-        'hover:bg-background-secondary-hover overflow-hidden rounded-[1.25rem] bg-background-secondary transition-all duration-300 hover:-translate-y-2',
+        'overflow-hidden rounded-[1.25rem] bg-background-secondary transition-all duration-300 hover:-translate-y-2 hover:bg-background-secondary-hover',
         figureAttributes.className,
       )}
     >

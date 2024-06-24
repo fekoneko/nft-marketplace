@@ -1,6 +1,5 @@
-import { Nft } from '../../@types/globals';
 import ActionButton from '../common/ActionButton';
-import NftCard from '../common/NftCard';
+import NftCard, { Nft } from '../common/NftCard';
 import getStartedIcon from '../../assets/button-icons/get-started-icon.svg';
 import { breakpoints } from '../../lib/use-breakpoint';
 import { useBreakpoint } from 'use-breakpoint';

@@ -1,5 +1,4 @@
-import { Creator } from '../../@types/globals';
-import CreatorCard from '../common/CreatorCard';
+import CreatorCard, { Creator } from '../common/CreatorCard';
 import ActionButton from '../common/ActionButton';
 import getStartedIcon from '../../assets/button-icons/get-started-icon.svg';
 import { useBreakpoint } from 'use-breakpoint';

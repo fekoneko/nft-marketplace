@@ -1,6 +1,11 @@
 import { HTMLAttributes } from 'react';
-import { Creator } from '../../@types/globals';
 import { twMerge } from 'tailwind-merge';
+
+export interface Creator {
+  image: string;
+  name: string;
+  totalSales: number;
+}
 
 export interface CreatorCardProps {
   creator: Creator;
@@ -17,7 +22,7 @@ const CreatorCard = ({
     <figure
       {...figureAttributes}
       className={twMerge(
-        'hover:bg-background-secondary-hover relative flex items-center gap-5 overflow-hidden rounded-[1.25rem] bg-background-secondary p-5 transition-all duration-300 hover:-translate-y-2',
+        'relative flex items-center gap-5 overflow-hidden rounded-[1.25rem] bg-background-secondary p-5 transition-all duration-300 hover:-translate-y-2 hover:bg-background-secondary-hover',
         !compact && 'flex-col',
         figureAttributes.className,
       )}

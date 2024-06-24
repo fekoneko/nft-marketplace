@@ -1,5 +1,4 @@
-import { Collection } from '../../@types/globals';
-import CollectionCard from '../common/CollectionCard';
+import CollectionCard, { Collection } from '../common/CollectionCard';
 import { breakpoints } from '../../lib/use-breakpoint';
 import { useBreakpoint } from 'use-breakpoint';
 

@@ -1,4 +1,11 @@
-import { Collection } from '../../@types/globals';
+import { Creator } from './CreatorCard';
+
+export interface Collection {
+  title: string;
+  creator: Creator;
+  previews: string[];
+  size: number;
+}
 
 const PreviewPlaceholder = () => {
   return <div className="aspect-square rounded-[1.25rem] bg-background-secondary" />;

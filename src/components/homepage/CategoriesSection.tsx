@@ -1,5 +1,4 @@
-import { Category } from '../../@types/globals';
-import CategoryCard from '../common/CategoryCard';
+import CategoryCard, { Category } from '../common/CategoryCard';
 import { breakpoints } from '../../lib/use-breakpoint';
 import { useBreakpoint } from 'use-breakpoint';
 
