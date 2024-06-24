@@ -3,7 +3,7 @@ import ActionButton from '@/components/common/ActionButton';
 import seeAllIcon from '@/assets/button-icons/see-all-icon.svg';
 import NftCard, { Nft } from '@/components/common/NftCard';
 import { useBreakpoint } from 'use-breakpoint';
-import { breakpoints } from '@/lib/use-breakpoint';
+import { BREAKPOINTS } from '@/lib/use-breakpoint';
 
 const nfts: Nft[] = [
   {
@@ -48,7 +48,7 @@ const SeeAllButton: FC = () => (
 );
 
 const NftsSection: FC = () => {
-  const { minWidth } = useBreakpoint(breakpoints, 'xs');
+  const { minWidth } = useBreakpoint(BREAKPOINTS, 'xs');
 
   return (
     <section className="px-8 py-10 sm:px-[4.5rem] sm:pb-20 lg:px-[7.25rem] lg:py-20">
@@ -57,18 +57,18 @@ const NftsSection: FC = () => {
           <h1 className="mb-1.5 text-3xl font-semibold lg:text-4xl">Discover More NFTs</h1>
           <p className="text-lg lg:text-2xl">Explore New Trending NFTs</p>
         </div>
-        {minWidth >= breakpoints.sm && <SeeAllButton />}
+        {minWidth >= BREAKPOINTS.sm && <SeeAllButton />}
       </div>
 
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-7 lg:grid-cols-3">
         {nfts
-          .slice(0, minWidth < breakpoints.sm || minWidth >= breakpoints.lg ? 3 : 2)
+          .slice(0, minWidth < BREAKPOINTS.sm || minWidth >= BREAKPOINTS.lg ? 3 : 2)
           .map((nft) => (
             <NftCard key={nft.title} nft={nft} detailed />
           ))}
       </div>
 
-      {minWidth < breakpoints.sm && <SeeAllButton />}
+      {minWidth < BREAKPOINTS.sm && <SeeAllButton />}
     </section>
   );
 };

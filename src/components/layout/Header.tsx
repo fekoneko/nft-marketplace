@@ -6,7 +6,7 @@ import { twMerge } from 'tailwind-merge';
 import ActionButton from '@/components/common/ActionButton';
 import Icon from '@/components/common/Icon';
 import { useBreakpoint } from 'use-breakpoint';
-import { breakpoints } from '@/lib/use-breakpoint';
+import { BREAKPOINTS } from '@/lib/use-breakpoint';
 
 interface Link {
   name: string;
@@ -60,7 +60,7 @@ const Nav: FC = () => (
 );
 
 const Header: FC = () => {
-  const { minWidth } = useBreakpoint(breakpoints, 'xs');
+  const { minWidth } = useBreakpoint(BREAKPOINTS, 'xs');
   const [isMenuOpened, setIsMenuOpened] = useState(false);
 
   return (
@@ -71,7 +71,7 @@ const Header: FC = () => {
           <h1 className="font-mono lg:text-2xl">NFT Marketplace</h1>
         </a>
 
-        {minWidth >= breakpoints.lg && (
+        {minWidth >= BREAKPOINTS.lg && (
           <div className="flex gap-2">
             <Nav />
             <ActionButton icon={userIcon} withAccent className="px-8">
@@ -80,14 +80,14 @@ const Header: FC = () => {
           </div>
         )}
 
-        {minWidth < breakpoints.lg && (
+        {minWidth < BREAKPOINTS.lg && (
           <button onClick={() => setIsMenuOpened((prev) => !prev)}>
             <Icon src={hamburgerMenuIcon} className="size-6 bg-white" aria-label="Menu" />
           </button>
         )}
       </header>
 
-      {minWidth < breakpoints.lg && <Menu isOpen={isMenuOpened} />}
+      {minWidth < BREAKPOINTS.lg && <Menu isOpen={isMenuOpened} />}
     </>
   );
 };

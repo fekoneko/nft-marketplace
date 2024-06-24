@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import CollectionCard, { Collection } from '@/components/common/CollectionCard';
-import { breakpoints } from '@/lib/use-breakpoint';
+import { BREAKPOINTS } from '@/lib/use-breakpoint';
 import { useBreakpoint } from 'use-breakpoint';
 
 const collections: Collection[] = [
@@ -49,7 +49,7 @@ const collections: Collection[] = [
 ];
 
 const CollectionsSection: FC = () => {
-  const { minWidth } = useBreakpoint(breakpoints, 'xs');
+  const { minWidth } = useBreakpoint(BREAKPOINTS, 'xs');
 
   return (
     <section className="px-8 py-10 sm:px-[4.5rem] lg:px-[7.25rem] lg:py-20">
@@ -60,7 +60,7 @@ const CollectionsSection: FC = () => {
 
       <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
         {collections
-          .slice(0, minWidth < breakpoints.sm ? 1 : minWidth >= breakpoints.lg ? 3 : 2)
+          .slice(0, minWidth < BREAKPOINTS.sm ? 1 : minWidth >= BREAKPOINTS.lg ? 3 : 2)
           .map((collection) => (
             <CollectionCard key={collection.title} collection={collection} />
           ))}

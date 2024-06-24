@@ -2,7 +2,7 @@ import { FC } from 'react';
 import ActionButton from '@/components/common/ActionButton';
 import NftCard, { Nft } from '@/components/common/NftCard';
 import getStartedIcon from '@/assets/button-icons/get-started-icon.svg';
-import { breakpoints } from '@/lib/use-breakpoint';
+import { BREAKPOINTS } from '@/lib/use-breakpoint';
 import { useBreakpoint } from 'use-breakpoint';
 
 const highlightedNft: Nft = {
@@ -41,7 +41,7 @@ const Stats: FC = () => (
 );
 
 const WelcomeSection: FC = () => {
-  const { minWidth } = useBreakpoint(breakpoints, 'xs');
+  const { minWidth } = useBreakpoint(BREAKPOINTS, 'xs');
 
   return (
     <section className="flex flex-col gap-10 px-8 py-10 sm:flex-row sm:items-start sm:px-[4.5rem] sm:py-20 lg:px-[7.25rem]">
@@ -54,7 +54,7 @@ const WelcomeSection: FC = () => {
           240k NFT Artists.
         </p>
 
-        {minWidth >= breakpoints.sm && (
+        {minWidth >= BREAKPOINTS.sm && (
           <>
             <GetStartedButton />
             <Stats />
@@ -64,7 +64,7 @@ const WelcomeSection: FC = () => {
 
       <NftCard nft={highlightedNft} className="basis-1/2" />
 
-      {minWidth < breakpoints.sm && (
+      {minWidth < BREAKPOINTS.sm && (
         <>
           <GetStartedButton />
           <Stats />

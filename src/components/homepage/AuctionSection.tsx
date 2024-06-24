@@ -4,7 +4,7 @@ import seeAllIcon from '@/assets/button-icons/see-all-icon.svg';
 import { Nft } from '@/components/common/NftCard';
 import Countdown from '@/components/common/Countdown';
 import { useBreakpoint } from 'use-breakpoint';
-import { breakpoints } from '@/lib/use-breakpoint';
+import { BREAKPOINTS } from '@/lib/use-breakpoint';
 
 const auctionNft: Nft = {
   image: '/nfts/magic-mushrooms-1-by-shroomie.jpg',
@@ -25,7 +25,7 @@ const SeeNftButton: FC = () => (
 );
 
 const AuctionSection: FC = () => {
-  const { minWidth } = useBreakpoint(breakpoints, 'xs');
+  const { minWidth } = useBreakpoint(BREAKPOINTS, 'xs');
 
   return (
     <section
@@ -42,11 +42,11 @@ const AuctionSection: FC = () => {
           <h1 className="text-4xl font-semibold leading-[2.85rem] lg:text-[3.1875rem] lg:leading-[3.5rem]">
             {auctionNft.title}
           </h1>
-          {minWidth >= breakpoints.sm && <SeeNftButton />}
+          {minWidth >= BREAKPOINTS.sm && <SeeNftButton />}
         </div>
 
         <Countdown initialTime={215999} caption="Auction ends in" />
-        {minWidth < breakpoints.sm && <SeeNftButton />}
+        {minWidth < BREAKPOINTS.sm && <SeeNftButton />}
       </div>
     </section>
   );

@@ -3,7 +3,7 @@ import CreatorCard, { Creator } from '@/components/common/CreatorCard';
 import ActionButton from '@/components/common/ActionButton';
 import getStartedIcon from '@/assets/button-icons/get-started-icon.svg';
 import { useBreakpoint } from 'use-breakpoint';
-import { breakpoints } from '@/lib/use-breakpoint';
+import { BREAKPOINTS } from '@/lib/use-breakpoint';
 
 const creators: Creator[] = [
   {
@@ -75,7 +75,7 @@ const ViewRankingsButton: FC = () => (
 );
 
 const CreatorsSection: FC = () => {
-  const { minWidth } = useBreakpoint(breakpoints, 'xs');
+  const { minWidth } = useBreakpoint(BREAKPOINTS, 'xs');
 
   return (
     <section className="px-8 py-10 sm:px-[4.5rem] lg:px-[7.25rem] lg:py-20">
@@ -84,18 +84,18 @@ const CreatorsSection: FC = () => {
           <h1 className="mb-1.5 text-3xl font-semibold lg:text-4xl">Top Creators</h1>
           <p className="text-lg lg:text-2xl">Checkout Top Rated Creators On The NFT Marketplace</p>
         </div>
-        {minWidth >= breakpoints.sm && <ViewRankingsButton />}
+        {minWidth >= BREAKPOINTS.sm && <ViewRankingsButton />}
       </div>
 
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-7 lg:grid-cols-3 xl:grid-cols-4">
         {creators
           .slice(
             0,
-            minWidth < breakpoints.sm
+            minWidth < BREAKPOINTS.sm
               ? 5
-              : minWidth >= breakpoints.xl
+              : minWidth >= BREAKPOINTS.xl
                 ? 12
-                : minWidth >= breakpoints.lg
+                : minWidth >= BREAKPOINTS.lg
                   ? 9
                   : 6,
           )
@@ -104,12 +104,12 @@ const CreatorsSection: FC = () => {
               key={creator.name}
               creator={creator}
               topRank={index + 1}
-              compact={minWidth < breakpoints.lg}
+              compact={minWidth < BREAKPOINTS.lg}
             />
           ))}
       </div>
 
-      {minWidth < breakpoints.sm && <ViewRankingsButton />}
+      {minWidth < BREAKPOINTS.sm && <ViewRankingsButton />}
     </section>
   );
 };

@@ -6,7 +6,7 @@ import twitterIcon from '@/assets/social-media-icons/twitter.svg';
 import instagramIcon from '@/assets/social-media-icons/instagram.svg';
 import WeeklyDigestForm from '@/components/homepage/WeeklyDigestForm';
 import { useBreakpoint } from 'use-breakpoint';
-import { breakpoints } from '@/lib/use-breakpoint';
+import { BREAKPOINTS } from '@/lib/use-breakpoint';
 
 interface Link {
   name: string;
@@ -29,7 +29,7 @@ const socialMediaLinks: LinkWithIcon[] = [
 ];
 
 const Footer: FC = () => {
-  const { minWidth } = useBreakpoint(breakpoints, 'xs');
+  const { minWidth } = useBreakpoint(BREAKPOINTS, 'xs');
 
   return (
     <footer
@@ -82,10 +82,10 @@ const Footer: FC = () => {
 
           <WeeklyDigestForm
             orientation={
-              minWidth < breakpoints.sm
+              minWidth < BREAKPOINTS.sm
                 ? 'vertical'
-                : minWidth >= breakpoints.md
-                  ? minWidth >= breakpoints.lg
+                : minWidth >= BREAKPOINTS.md
+                  ? minWidth >= BREAKPOINTS.lg
                     ? 'horizontal-no-icon'
                     : 'horizontal-compact'
                   : 'horizontal-no-icon'

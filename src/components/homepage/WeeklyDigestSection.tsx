@@ -2,10 +2,10 @@ import { FC } from 'react';
 import { useBreakpoint } from 'use-breakpoint';
 import promoImage from '@/assets/weekly-digest-promo.jpg';
 import WeeklyDigestForm from '@/components/homepage/WeeklyDigestForm';
-import { breakpoints } from '@/lib/use-breakpoint';
+import { BREAKPOINTS } from '@/lib/use-breakpoint';
 
 const WeeklyDigestSection: FC = () => {
-  const { minWidth } = useBreakpoint(breakpoints, 'xs');
+  const { minWidth } = useBreakpoint(BREAKPOINTS, 'xs');
 
   return (
     <section className="px-8 py-10 sm:px-[4.5rem] sm:pb-20 lg:px-[7.25rem]">
@@ -24,9 +24,9 @@ const WeeklyDigestSection: FC = () => {
 
           <WeeklyDigestForm
             orientation={
-              minWidth >= breakpoints.xl
+              minWidth >= BREAKPOINTS.xl
                 ? 'horizontal'
-                : minWidth >= breakpoints.lg
+                : minWidth >= BREAKPOINTS.lg
                   ? 'horizontal-compact'
                   : 'vertical'
             }
