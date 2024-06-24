@@ -23,7 +23,7 @@ const WeeklyDigestSection: FC = () => {
           </p>
 
           <WeeklyDigestForm
-            style={
+            orientation={
               minWidth >= breakpoints.xl
                 ? 'horizontal'
                 : minWidth >= breakpoints.lg

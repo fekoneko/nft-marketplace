@@ -81,7 +81,7 @@ const Footer: FC = () => {
           <p className="lg:max-w-80">Get exclusive promotions & updates straight to your inbox.</p>
 
           <WeeklyDigestForm
-            style={
+            orientation={
               minWidth < breakpoints.sm
                 ? 'vertical'
                 : minWidth >= breakpoints.md
