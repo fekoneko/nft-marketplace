@@ -1,4 +1,10 @@
-import { FC, useEffect, useLayoutEffect, useState } from 'react';
+import { FC, useEffect, useState } from 'react';
+
+interface Time {
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
 
 const formatTimerNumber = (number: number) => {
   if (number < 0) return '00';
@@ -8,35 +14,23 @@ const formatTimerNumber = (number: number) => {
 };
 
 export interface CountdownProps {
-  initialTime: number;
   caption?: string;
 }
 
-export const Countdown: FC<CountdownProps> = ({ initialTime, caption }) => {
-  const [hours, setHours] = useState(59);
-  const [minutes, setMinutes] = useState(59);
-  const [seconds, setSeconds] = useState(59);
-
-  useLayoutEffect(() => {
-    setHours(Math.floor(initialTime / 3600));
-    setMinutes(Math.floor((initialTime % 3600) / 60));
-    setSeconds(initialTime % 60);
-  }, [initialTime]);
+export const Countdown: FC<CountdownProps> = ({ caption }) => {
+  const [time, setTime] = useState<Time>({ hours: 59, minutes: 59, seconds: 59 });
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setSeconds((prev) => (prev === 0 ? 59 : prev - 1));
+      setTime((prev) => ({
+        seconds: prev.seconds === 0 ? 59 : prev.seconds - 1,
+        minutes: prev.seconds === 0 ? (prev.minutes === 0 ? 59 : prev.minutes - 1) : prev.minutes,
+        hours: prev.minutes === 0 ? prev.hours - 1 : prev.hours,
+      }));
     }, 1000);
+
     return () => clearInterval(interval);
   }, []);
-
-  useLayoutEffect(() => {
-    if (seconds === 0) setMinutes((prev) => (prev === 0 ? 59 : prev - 1));
-  }, [seconds]);
-
-  useLayoutEffect(() => {
-    if (minutes === 0) setHours((prev) => prev - 1);
-  }, [minutes]);
 
   return (
     <div className="flex justify-center rounded-[1.25rem] bg-background-secondary/50 p-[1.875rem] font-mono">
@@ -45,17 +39,23 @@ export const Countdown: FC<CountdownProps> = ({ initialTime, caption }) => {
 
         <div className="flex items-start gap-2">
           <div>
-            <p className="text-4xl font-semibold leading-[2.85rem]">{formatTimerNumber(hours)}</p>
+            <p className="text-4xl font-semibold leading-[2.85rem]">
+              {formatTimerNumber(time.hours)}
+            </p>
             <p className="text-xs">Hours</p>
           </div>
           <p className="text-3xl font-semibold leading-10">:</p>
           <div>
-            <p className="text-4xl font-semibold leading-[2.85rem]">{formatTimerNumber(minutes)}</p>
+            <p className="text-4xl font-semibold leading-[2.85rem]">
+              {formatTimerNumber(time.minutes)}
+            </p>
             <p className="text-xs">Minutes</p>
           </div>
           <p className="text-3xl font-semibold leading-10">:</p>
           <div>
-            <p className="text-4xl font-semibold leading-[2.85rem]">{formatTimerNumber(seconds)}</p>
+            <p className="text-4xl font-semibold leading-[2.85rem]">
+              {formatTimerNumber(time.seconds)}
+            </p>
             <p className="text-xs">Seconds</p>
           </div>
         </div>
