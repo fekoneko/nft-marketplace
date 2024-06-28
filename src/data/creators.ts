@@ -1,4 +1,4 @@
-import { Creator } from '@/types/Creator';
+import { Creator } from '@/types/creator';
 
 export const CREATORS: Creator[] = [
   {

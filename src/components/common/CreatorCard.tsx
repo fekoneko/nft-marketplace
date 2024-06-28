@@ -1,4 +1,4 @@
-import { Creator } from '@/types/Creator';
+import { Creator } from '@/types/creator';
 import { FC, HTMLAttributes } from 'react';
 import { twMerge } from 'tailwind-merge';
 

@@ -1,4 +1,4 @@
-import { Category } from '@/types/Category';
+import { Category } from '@/types/category';
 import { FC, HTMLAttributes } from 'react';
 import { twMerge } from 'tailwind-merge';
 

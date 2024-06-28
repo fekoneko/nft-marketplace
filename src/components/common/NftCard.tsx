@@ -1,5 +1,5 @@
 import { FC, HTMLAttributes } from 'react';
-import { Nft } from '@/types/Nft';
+import { Nft } from '@/types/nft';
 import { twMerge } from 'tailwind-merge';
 
 export interface NftCardProps {

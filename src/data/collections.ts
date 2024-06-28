@@ -1,4 +1,4 @@
-import { Collection } from '@/types/Collection';
+import { Collection } from '@/types/collection';
 
 export const COLLECTIONS: Collection[] = [
   {

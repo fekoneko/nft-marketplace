@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Collection } from '@/types/Collection';
+import { Collection } from '@/types/collection';
 
 const PreviewPlaceholder: FC = () => (
   <div className="aspect-square rounded-[1.25rem] bg-background-secondary" />

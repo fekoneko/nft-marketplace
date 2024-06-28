@@ -1,4 +1,4 @@
-import { Nft } from '@/types/Nft';
+import { Nft } from '@/types/nft';
 
 export const NFTS: Nft[] = [
   {
