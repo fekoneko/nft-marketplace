@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  input,
+  textarea {
+    @apply min-w-0 rounded-[1.25rem] bg-white px-5 py-4 text-black placeholder:text-text-secondary;
+  }
+}
+
+@layer components {
+  .hide-svg-blur {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .svg-blur {
+    -webkit-filter: url('#svg-blur');
+    filter: url('#svg-blur');
+  }
+
+  .offscreen {
+    position: absolute;
+    left: -999999px;
+    top: -999999px;
+    width: 1px;
+    height: 1px;
+  }
+}
