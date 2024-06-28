@@ -1,14 +1,6 @@
 import { FC, HTMLAttributes } from 'react';
-import { Creator } from '@/components/common/CreatorCard';
+import { Nft } from '@/types/Nft';
 import { twMerge } from 'tailwind-merge';
-
-export interface Nft {
-  image: string;
-  title: string;
-  creator: Creator;
-  price: number;
-  highestBid: number;
-}
 
 export interface NftCardProps {
   nft: Nft;

@@ -1,21 +1,10 @@
 import { FC } from 'react';
 import { ActionButton } from '@/components/common/ActionButton';
-import { NftCard, Nft } from '@/components/common/NftCard';
+import { NftCard } from '@/components/common/NftCard';
+import { HIGHLIGHTED_NFT } from '@/data/nfts';
 import getStartedIcon from '@/assets/button-icons/get-started-icon.svg';
 import { BREAKPOINTS } from '@/lib/use-breakpoint';
 import { useBreakpoint } from 'use-breakpoint';
-
-const highlightedNft: Nft = {
-  image: '/nfts/space-walking-by-animakid.jpg',
-  title: 'Space Walking',
-  creator: {
-    image: '/creators/animakid.jpg',
-    name: 'Animakid',
-    totalSales: 34.53,
-  },
-  price: 1.63,
-  highestBid: 0.33,
-};
 
 const GetStartedButton: FC = () => (
   <ActionButton icon={getStartedIcon} withAccent className="sm:self-start">
@@ -62,7 +51,7 @@ export const WelcomeSection: FC = () => {
         )}
       </div>
 
-      <NftCard nft={highlightedNft} className="basis-1/2" />
+      <NftCard nft={HIGHLIGHTED_NFT} className="basis-1/2" />
 
       {minWidth < BREAKPOINTS.sm && (
         <>

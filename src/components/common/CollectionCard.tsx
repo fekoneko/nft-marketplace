@@ -1,12 +1,5 @@
 import { FC } from 'react';
-import { Creator } from '@/components/common/CreatorCard';
-
-export interface Collection {
-  title: string;
-  creator: Creator;
-  previews: string[];
-  size: number;
-}
+import { Collection } from '@/types/Collection';
 
 const PreviewPlaceholder: FC = () => (
   <div className="aspect-square rounded-[1.25rem] bg-background-secondary" />

@@ -1,11 +1,6 @@
+import { Creator } from '@/types/Creator';
 import { FC, HTMLAttributes } from 'react';
 import { twMerge } from 'tailwind-merge';
-
-export interface Creator {
-  image: string;
-  name: string;
-  totalSales: number;
-}
 
 export interface CreatorCardProps {
   creator: Creator;

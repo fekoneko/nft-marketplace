@@ -1,52 +1,8 @@
 import { FC } from 'react';
-import { CollectionCard, Collection } from '@/components/common/CollectionCard';
+import { CollectionCard } from '@/components/common/CollectionCard';
+import { COLLECTIONS } from '@/data/collections';
 import { BREAKPOINTS } from '@/lib/use-breakpoint';
 import { useBreakpoint } from 'use-breakpoint';
-
-const collections: Collection[] = [
-  {
-    title: 'DSGN Animals',
-    creator: {
-      image: '/creators/mrfox.jpg',
-      name: 'MrFox',
-      totalSales: 34.53,
-    },
-    previews: [
-      '/nfts/dsgn-animals-1-by-mrfox.jpg',
-      '/nfts/dsgn-animals-2-by-mrfox.jpg',
-      '/nfts/dsgn-animals-3-by-mrfox.jpg',
-    ],
-    size: 1028,
-  },
-  {
-    title: 'Magic Mushrooms',
-    creator: {
-      image: '/creators/shroomie.jpg',
-      name: 'Shroomie',
-      totalSales: 34.53,
-    },
-    previews: [
-      '/nfts/magic-mushrooms-1-by-shroomie.jpg',
-      '/nfts/magic-mushrooms-2-by-shroomie.jpg',
-      '/nfts/magic-mushrooms-3-by-shroomie.jpg',
-    ],
-    size: 1028,
-  },
-  {
-    title: 'Disco Machines',
-    creator: {
-      image: '/creators/bekind2robots.jpg',
-      name: 'BeKind2Robots',
-      totalSales: 34.53,
-    },
-    previews: [
-      '/nfts/disco-machines-1-by-bekind2robots.jpg',
-      '/nfts/disco-machines-2-by-bekind2robots.jpg',
-      '/nfts/disco-machines-3-by-bekind2robots.jpg',
-    ],
-    size: 1028,
-  },
-];
 
 export const CollectionsSection: FC = () => {
   const { minWidth } = useBreakpoint(BREAKPOINTS, 'xs');
@@ -59,11 +15,12 @@ export const CollectionsSection: FC = () => {
       </p>
 
       <div className="grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-3">
-        {collections
-          .slice(0, minWidth < BREAKPOINTS.sm ? 1 : minWidth >= BREAKPOINTS.lg ? 3 : 2)
-          .map((collection) => (
-            <CollectionCard key={collection.title} collection={collection} />
-          ))}
+        {COLLECTIONS.slice(
+          0,
+          minWidth < BREAKPOINTS.sm ? 1 : minWidth >= BREAKPOINTS.lg ? 3 : 2,
+        ).map((collection) => (
+          <CollectionCard key={collection.title} collection={collection} />
+        ))}
       </div>
     </section>
   );

@@ -1,11 +1,6 @@
+import { Category } from '@/types/Category';
 import { FC, HTMLAttributes } from 'react';
 import { twMerge } from 'tailwind-merge';
-
-export interface Category {
-  icon: string;
-  title: string;
-  preview: string;
-}
 
 export interface NftCardProps {
   category: Category;

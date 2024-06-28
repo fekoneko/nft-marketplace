@@ -1,72 +1,10 @@
 import { FC } from 'react';
-import { CreatorCard, Creator } from '@/components/common/CreatorCard';
+import { CreatorCard } from '@/components/common/CreatorCard';
+import { CREATORS } from '@/data/creators';
 import { ActionButton } from '@/components/common/ActionButton';
 import getStartedIcon from '@/assets/button-icons/get-started-icon.svg';
 import { useBreakpoint } from 'use-breakpoint';
 import { BREAKPOINTS } from '@/lib/use-breakpoint';
-
-const creators: Creator[] = [
-  {
-    name: 'Keepitreal',
-    image: '/creators/keepitreal.jpg',
-    totalSales: 34.53,
-  },
-  {
-    name: 'DigiLab',
-    image: '/creators/digilab.jpg',
-    totalSales: 34.53,
-  },
-  {
-    name: 'GravityOne',
-    image: '/creators/gravityone.jpg',
-    totalSales: 34.53,
-  },
-  {
-    name: 'Juanie',
-    image: '/creators/juanie.jpg',
-    totalSales: 34.53,
-  },
-  {
-    name: 'BlueWhale',
-    image: '/creators/bluewhale.jpg',
-    totalSales: 34.53,
-  },
-  {
-    name: 'MrFox',
-    image: '/creators/mrfox.jpg',
-    totalSales: 34.53,
-  },
-  {
-    name: 'Shroomie',
-    image: '/creators/shroomie.jpg',
-    totalSales: 34.53,
-  },
-  {
-    name: 'Robotica',
-    image: '/creators/robotica.jpg',
-    totalSales: 34.53,
-  },
-  {
-    name: 'RustyRobot',
-    image: '/creators/rustyrobot.jpg',
-    totalSales: 34.53,
-  },
-  {
-    name: 'Animakid',
-    image: '/creators/animakid.jpg',
-    totalSales: 34.53,
-  },
-  {
-    name: 'Dotgu',
-    image: '/creators/dotgu.jpg',
-    totalSales: 34.53,
-  },
-  {
-    name: 'Ghiblier',
-    image: '/creators/ghiblier.jpg',
-    totalSales: 34.53,
-  },
-];
 
 const ViewRankingsButton: FC = () => (
   <ActionButton icon={getStartedIcon} className="mt-10 w-full whitespace-nowrap sm:mt-0 sm:w-auto">
@@ -88,25 +26,23 @@ export const CreatorsSection: FC = () => {
       </div>
 
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-7 lg:grid-cols-3 xl:grid-cols-4">
-        {creators
-          .slice(
-            0,
-            minWidth < BREAKPOINTS.sm
-              ? 5
-              : minWidth >= BREAKPOINTS.xl
-                ? 12
-                : minWidth >= BREAKPOINTS.lg
-                  ? 9
-                  : 6,
-          )
-          .map((creator, index) => (
-            <CreatorCard
-              key={creator.name}
-              creator={creator}
-              topRank={index + 1}
-              compact={minWidth < BREAKPOINTS.lg}
-            />
-          ))}
+        {CREATORS.slice(
+          0,
+          minWidth < BREAKPOINTS.sm
+            ? 5
+            : minWidth >= BREAKPOINTS.xl
+              ? 12
+              : minWidth >= BREAKPOINTS.lg
+                ? 9
+                : 6,
+        ).map((creator, index) => (
+          <CreatorCard
+            key={creator.name}
+            creator={creator}
+            topRank={index + 1}
+            compact={minWidth < BREAKPOINTS.lg}
+          />
+        ))}
       </div>
 
       {minWidth < BREAKPOINTS.sm && <ViewRankingsButton />}
